@@ -4,7 +4,7 @@
 	"auto_unpin_on_clear": false,
 	"layout_swap_left_right": false,
 	"allow_resize": true,
-	"chest_unopened_img": "images/chest.png",
-	"chest_opened_img": "images/chest_open.png",
+	"chest_unopened_img": "images/items/chest.png",
+	"chest_opened_img": "images/items/chest_open.png",
 	"disabled_image_filter": "grayscale,dim"
 }
