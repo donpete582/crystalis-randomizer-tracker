@@ -37,7 +37,7 @@
 				"name": "Goa: Sabera's Floor",
 				"access_rules": [
 					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canKillSabera2]",
-					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers, $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall]"
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers, $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall], $canMaybeKillSabera2, [$canKillSabera2]"
 				],
 				"sections": [
 					{
