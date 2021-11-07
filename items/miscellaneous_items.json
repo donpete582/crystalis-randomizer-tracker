@@ -1,0 +1,72 @@
+[
+	//Tornel Bracelet Check
+	{
+		"name": "Tornel Bracelet Check",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"img": "images/items/braceletofwind.png",
+				"img_mods": "overlay|images/badges/tornel.png",
+				"codes": "tornel, tornelwind",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/braceletoffire.png",
+				"img_mods": "overlay|images/badges/tornel.png",
+				"codes": "tornel, tornelfire",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/braceletofwater.png",
+				"img_mods": "overlay|images/badges/tornel.png",
+				"codes": "tornel, tornelwater",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/braceletofthunder.png",
+				"img_mods": "overlay|images/badges/tornel.png",
+				"codes": "tornel, tornelthunder",
+				"inherit_codes" : false
+			}
+		]
+	},
+	//Rage Sword Check
+	{
+		"name": "Rage Sword Check",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"img": "images/items/swordofwind.png",
+				"img_mods": "overlay|images/badges/rage.png",
+				"codes": "rage, ragewind",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/swordoffire.png",
+				"img_mods": "overlay|images/badges/rage.png",
+				"codes": "rage, ragesfire",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/swordofwater.png",
+				"img_mods": "overlay|images/badges/rage.png",
+				"codes": "rage, ragewater",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/thundernowarp.png",
+				"img_mods": "overlay|images/badges/rage.png",
+				"codes": "rage, ragethunder",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/items/swordblank.png",
+				"img_mods": "overlay|images/badges/ragetested.png",
+				"codes": "rage, ragetested",
+				"inherit_codes" : false
+			},
+		]
+	},
+]

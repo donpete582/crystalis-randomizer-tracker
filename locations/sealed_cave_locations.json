@@ -1,0 +1,163 @@
+﻿[
+	{
+		//Sealed Cave
+		"name": "Sealed Cave",
+		"access_rules": [
+			"$maybeHasWindmillKey, [$hasWindmillKey], $canMaybeReach|leaf, [$canReach|leaf]",
+			"flag_vw"
+		],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "Sealed Cave Items0",
+				"access_rules": ["[$canBreakSealedCaveWalls]"],
+				"sections": [
+					{
+						"name": "Sealed Cave Items",
+						"item_count": 6,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 130,
+						"y": 1180,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Sealed Cave Items1",
+				"access_rules": ["[$canBreakSealedCaveWalls]"],
+				"sections": [
+					{
+						"name": "Sealed Cave Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 130,
+						"y": 1180,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Warp Boots
+			{
+				"name": "Sealed Cave",
+				"sections": [
+					{
+						"name": "Warp Boots",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 360,
+						"y": 200,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Medical Herb 1
+			{
+				"name": "Sealed Cave",
+				"sections": [
+					{
+						"name": "Medical Herb 1",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 415,
+						"y": 440,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Ball of Wind
+			{
+				"name": "Sealed Cave",
+				"sections": [
+					{
+						"name": "Ball of Wind",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 515,
+						"y": 540
+					}
+				]
+			},
+			//Antidote
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]"],
+				"sections": [
+					{
+						"name": "Antidote",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 515,
+						"y": 300,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Medical Herb 2
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]"],
+				"sections": [
+					{
+						"name": "Medical Herb 2",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 140,
+						"y": 220,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Vampire
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]"],
+				"sections": [
+					{
+						"name": "Vampire Reward",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 405,
+						"y": 90
+					}
+				]
+			},
+		]
+	}
+]

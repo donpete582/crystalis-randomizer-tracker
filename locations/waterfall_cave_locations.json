@@ -1,0 +1,164 @@
+[
+	{
+		//Waterfall Cave
+		"name": "Waterfall Cave",
+		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls]"],
+		"children": [
+			//Overview with mimics
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						"[$hasFluteOfLime]",
+					],
+				"sections": [
+					{
+						"name": "Waterfall Cave Items",
+						"item_count": 4,
+						"clear_as_group": "false"
+					},
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1190,
+						"y": 882,
+						"size": 90,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Overview without mimics
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"[$hasFluteOfLime], flag_gs"
+					],
+				"sections": [
+					{
+						"name": "Waterfall Cave Items",
+						"item_count": 3,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1190,
+						"y": 882,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"[$hasFluteOfLime], flag_gs"
+					],
+				"sections": [
+					{
+						"name": "Waterfall Cave Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1190,
+						"y": 882,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						""
+					],
+				"sections": [
+					{
+						"name": "Mimic",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_waterfall_cave",
+						"x": 20,
+						"y": 240,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"flag_gs"
+					],
+				"sections": [
+					{
+						"name": "Sword of Water",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_waterfall_cave",
+						"x": 640,
+						"y": 45,
+					}
+				],
+			},
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"flag_gs"
+					],
+				"sections": [
+					{
+						"name": "Flute of Lime",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_waterfall_cave",
+						"x": 540,
+						"y": 25,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Waterfall Cave",
+				"access_rules": [
+						"$maybeHasFluteOfLime, [$hasFluteOfLime]"
+					],
+				"sections": [
+					{
+						"name": "Rescue Akahana",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_waterfall_cave",
+						"x": 485,
+						"y": 25,
+					}
+				],
+			}
+		]
+	}
+]

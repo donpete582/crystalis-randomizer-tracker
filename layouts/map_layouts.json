@@ -1,0 +1,500 @@
+{
+	"world_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_overworld"
+				]
+			}
+		]
+	},
+	
+	"sealed_cave_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_wind_cave"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "scw" ]
+				]
+			}
+		]
+	},
+	
+	"mt_sabre_west_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_sabre_west"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "msww" ]
+				]
+			}
+		]
+	},
+	
+	"mt_sabre_north_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_sabre_north"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "msnw", "kelbesque1" ]
+				]
+			}
+		]
+	},
+	
+	"waterfall_cave_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_waterfall_cave"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "wcw" ]
+				]
+			}
+		]
+	},
+	
+	"fog_lamp_cave_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_fog_lamp_cave"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "flcw" ]
+				]
+			}
+		]
+	},
+	
+	"kirisa_plant_cave_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"scale": 0.8,
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_kirisa_plant_cave"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "kpcw" ]
+				]
+			}
+		]
+	},
+	
+	"evil_spirit_island_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_evil_spirit_island"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "esiw" ]
+				]
+			}
+		]
+	},
+	
+	"saberas_fortress_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_saberas_fortress"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "sabera1" ]
+				]
+			}
+		]
+	},
+	
+	"mt_hydra_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_mt_hydra"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "mhw" ]
+				]
+			}
+		]
+	},
+	
+	"styx_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_styx"
+				]
+			},
+		]
+	},
+	
+	"oasis_cave_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_oasis_cave"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "goa_basement_wall_cleared" ]
+				]
+			}
+		]
+	},
+	
+	"pyramid_front_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_pyramid_front"
+				]
+			},
+		]
+	},
+	
+	"pyramid_back_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"scale": 0.8,
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_pyramid_back"
+				]
+			},
+		]
+	},
+	
+	"goa_kelbesque_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"scale": 0.8,
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_goa_kelbesque"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "kelbesque2" ]
+				]
+			}
+		]
+	},
+	
+	"goa_sabera_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_goa_sabera"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "sabera2", "goa_sabera_boss_wall_cleared", "goa_sabera_item_wall_cleared" ]
+				]
+			}
+		]
+	},
+	
+	"goa_mado_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_goa_mado"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "mado2", "goa_mado_wall_cleared"]
+				]
+			}
+		]
+	},
+	
+	"goa_karmine_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_goa_karmine"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "karmine", "goa_karmine_wall_cleared"]
+				]
+			}
+		]
+	},
+}

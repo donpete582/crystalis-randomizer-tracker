@@ -1,0 +1,192 @@
+[
+	{
+		//Goa: Mado's Floor
+		"name": "Goa: Mado's Floor",
+		"access_rules": [
+			"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance]",
+			"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit]"
+		],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2], [$canCrossSpikes], [$canBreakMadoWall]",
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes, [$canKillMado2], [$canBreakMadoWall]"
+				],
+				"sections": [
+					{
+						"name": "Goa: Mado's Floor Items",
+						"item_count": 6,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 719,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2]",
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes, $canMaybeKillMado2, [$canKillMado2]"
+				],
+				"sections": [
+					{
+						"name": "Goa: Mado's Floor Items",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 719,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Magic Ring 1
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes",
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2], $canCrossSpikes"
+				],
+				"sections": [
+					{
+						"name": "Magic Ring 1",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_mado",
+						"x": 355,
+						"y": 375,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Magic Ring 2
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes, $canMaybeBreakMadoWall, [$canBreakMadoWall]",
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2], $canCrossSpikes, $canMaybeBreakMadoWall, [$canBreakMadoWall]"
+				],
+				"sections": [
+					{
+						"name": "Magic Ring 2",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_mado",
+						"x": 47,
+						"y": 260,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Magic Ring 3
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes",
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2]"
+				],
+				"sections": [
+					{
+						"name": "Magic Ring 3",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_mado",
+						"x": 610,
+						"y": 165,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Antidote
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes",
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2], $canCrossSpikes"
+				],
+				"sections": [
+					{
+						"name": "Antidote",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_mado",
+						"x": 20,
+						"y": 165,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Opel Statue
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes",
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2], $canCrossSpikes"
+				],
+				"sections": [
+					{
+						"name": "Opel Statue",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_mado",
+						"x": 290,
+						"y": 25,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Mado 2 Reward
+			{
+				"name": "Goa: Mado's Floor",
+				"access_rules": [
+					"$canMaybeReachMadosFloorEntrance, [$canReachMadosFloorEntrance], $canCrossSpikes, $canMaybeKillMado2, [$canKillMado2]",
+					"$canMaybeReachMadosFloorExit, [$canReachMadosFloorExit], $canMaybeKillMado2, [$canKillMado2]"
+				],
+				"sections": [
+					{
+						"name": "Mado 2 Reward",
+						"item_count": 1,
+						"hosted_item": "mado2_cleared"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_mado",
+						"x": 465,
+						"y": 100
+					}
+				]
+			},
+		]
+	}
+]

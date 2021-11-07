@@ -1,0 +1,568 @@
+﻿[
+	// Leaf Village
+	{
+		"name": "Leaf Village",
+		"access_rules": [
+			"$canMaybeReach|leaf, [$canReach|leaf]"
+		],
+		"sections": [
+			{
+				"name": "Leaf Elder",
+				"visibility_rules": [ "" ],
+                "item_count": 1
+			},
+			{
+				"name": "Zebu's Student",
+				"visibility_rules": [ "" ],
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"x": 275,
+				"y": 1564
+			}
+		]
+	},
+	
+	// Sleeping Guy
+	{
+		"name": "Windmill Guard",
+		"access_rules": [
+			"$maybeHasAlarmFlute, [$hasAlarmFlute], $canMaybeReach|leaf, [$canReach|leaf]"
+		],
+		"sections": [
+			{
+				"name": "Wake him up",
+				"visibility_rules": [ "" ],
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"x": 210,
+				"y": 1206
+			}
+		]
+	},
+	
+	// Windmill
+	{
+		"name": "Windmill Reward",
+		"access_rules": [
+			"$maybeHasWindmillKey, [$hasWindmillKey], $canMaybeReach|leaf, [$canReach|leaf]"
+		],
+		"sections": [
+			{
+				"name": "Activate Windmill",
+				"visibility_rules": [ "" ],
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"x": 140,
+				"y": 1256
+			}
+		]
+	},
+
+	// Tall Grass
+	{
+		"name": "Item in grass",
+		"access_rules": [
+			"$canMaybeReach|brynmaer, [$canReach|brynmaer]"
+		],
+		"sections": [
+			{
+				"name": "Walk on bridge first",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [""],
+				"x": 550,
+				"y": 1038
+			}
+		]
+	},
+	
+	// Akahana
+	{
+		"name": "Akahana Trade-In",
+		"access_rules": [
+			"$maybeHasAkahanaTrade, [$hasAkahanaTrade], $canMaybeReach|brynmaer, [$canReach|brynmaer]"
+		],
+		"sections": [
+			{
+				"name": "Give him item",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 400,
+				"y": 1150
+			}
+		]
+	},
+	
+	// Stom Fight
+	{
+		"name": "Stom Fight",
+		"access_rules": [
+			"$canMaybeReach|oak, $canMaybeReach|brynmaer, [$canReach|oak], [$canReach|brynmaer]"
+		],
+		"sections": [
+			{
+				"name": "Visit Oak first",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 605,
+				"y": 900
+			}
+		]
+	},
+
+	// Amazones Items
+	{
+		"name": "Amazones",
+		"access_rules": [
+			"change, $canMaybeReach|amazones, [$canReach|amazones]",
+			"paralysis, $canMaybeReach|amazones, [$canReach|amazones]",
+			"flag_gs, $canMaybeReach|amazones, [$canReach|amazones]",
+			"$canTriggerSkip, $canMaybeReach|amazones, [$canReach|amazones]"
+		],
+		"sections": [
+			{
+				"name": "Storage Room",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 580,
+				"y": 1350
+			}
+		]
+	},
+	{
+		"name": "Amazones",
+		"access_rules": [
+			"change, $maybeHasAryllisTrade, [$hasAryllisTrade], $canMaybeReach|amazones, [$canReach|amazones]"
+		],
+		"sections": [
+			{
+				"name": "Trade In Kirisa Plant",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 650,
+				"y": 1350
+			}
+		]
+	},
+
+	// Oak Items
+	{
+		"name": "Save the child or kill the boss",
+		"access_rules": [
+			"telepathy, gas, $canMaybeReach|oak, [$canReach|oak]",
+			"telepathy, flag_ng, $canMaybeReach|oak, [$canReach|oak]"
+		],
+		"sections": [
+			{
+				"name": "Mom",
+                "item_count": 1
+			},
+			{
+				"name": "Oak Elder",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 900,
+				"y": 1042
+			}
+		]
+	},
+
+	// Insect Fight
+	{
+		"name": "Insect Boss",
+		"access_rules": [
+			"$maybeHasInsectFlute, [$hasInsectFlute], gas, $canMaybeKillInsect, [$canKillInsect], $canMaybeReach|oak, [$canReach|oak]"
+		],
+		"sections": [
+			{
+				"name": "Use Insect Flute",
+                "item_count": 1,
+				"hosted_item": "giantinsect_cleared"
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 900,
+				"y": 1102
+			}
+		]
+	},
+
+	// Portoa Items
+	{
+		"name": "Queen 1",
+		"access_rules": [
+			"paralysis, $canMaybeReach|portoa, [$canReach|portoa]",
+			"flag_gs, $canMaybeReach|portoa, [$canReach|portoa]",
+			"$canTriggerSkip, $canMaybeReach|portoa, [$canReach|portoa]",
+			"$maybeHasRageSword, [$hasRageSword], $canMaybeReach|portoa, [$canReach|portoa]",
+			"$canMaybeTriggerMesia, [$canTriggerMesia], $canMaybeReach|portoa, [$canReach|portoa]",
+			"flight, $canMaybeReach|joel, [$canReach|joel]",
+			"$canMaybeUseShellFlute, [$canUseShellFlute], $canMaybeReach|joel, [$canReach|joel]"
+		],
+		"sections": [
+			{
+				"name": "Queen 1",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 980,
+				"y": 1002
+			}
+		]
+	},
+	{
+		"name": "Queen 2",
+		"access_rules": [
+			"$canMaybeTriggerMesia, [$canTriggerMesia], $canCrossRivers, $canMaybeReach|portoa, [$canReach|portoa]"
+		],
+		"sections": [
+			{
+				"name": "Queen 2 (Talk to Mesia first)",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 980,
+				"y": 942
+			}
+		]
+	},
+	{
+		"name": "Dolphin",
+		"access_rules": [
+			"$canMaybeTriggerMesia, [$canTriggerMesia], $canCrossRivers, $canMaybeReach|portoa, [$canReach|portoa]"
+		],
+		"sections": [
+			{
+				"name": "Heal them",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 980,
+				"y": 882
+			}
+		]
+	},
+	{
+		"name": "Portoa Waterway",
+		"access_rules": [
+			"flight, $canMaybeReach|joel, [$canReach|joel]",
+			"$canMaybeUseShellFlute, [$canUseShellFlute], $canMaybeReach|joel, [$canReach|joel]"
+		],
+		"sections": [
+			{
+				"name": "Underwater Item",
+				"visibility_rules": [ "" ],
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"x": 980,
+				"y": 822
+			}
+		]
+	},
+	// Kensu's Beach House
+	{
+		"name": "Kensu's Beach House",
+		"access_rules": [
+			"$maybeHasFishermanTrade, [$hasFishermanTrade], $canMaybeReach|portoa, [$canReach|portoa]"
+		],
+		"sections": [
+			{
+				"name": "Take the boat",
+				"item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "$negate|flag_rd" ],
+				"x": 1190,
+				"y": 720
+			}
+		]
+	},
+
+	// Rage
+	{
+		"name": "Lime Tree",
+		"access_rules": [
+			"$maybeHasRageSword, [$hasRageSword], $canMaybeReach|portoa, [$canReach|portoa]"
+		],
+		"sections": [
+			{
+				"name": "Rage",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 910,
+				"y": 1300
+			}
+		]
+	},
+	
+	// Sleeping Kensu
+	{
+		"name": "Lighthouse",
+		"access_rules": [
+			"glasses, $maybeHasAlarmFlute, [$hasAlarmFlute], $canMaybeReach|joel, [$canReach|joel]"
+		],
+		"sections": [
+			{
+				"name": "Wake Up Kensu",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 1050,
+				"y": 600
+			}
+		]
+	},
+	
+	// Post-Sabera Clean-up
+	{
+		"name": "Clark",
+		"access_rules": [
+			"$canMaybeKillSabera1, [$canKillSabera1], $canMaybeReach|zombie, [$canReach|zombie]"
+		],
+		"sections": [
+			{
+				"name": "Kill Sabera first",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 920,
+				"y": 510
+			}
+		]
+	},
+	
+	// Altar
+	{
+		"name": "Altar",
+		"access_rules": [
+			"$maybeHasWhirlpoolStatue, [$hasWhirlpoolStatue], flight, $canMaybeReach|joel, [$canReach|joel]",
+			"$maybeHasWhirlpoolStatue, [$hasWhirlpoolStatue], $canMaybeUseShellFlute, [$canUseShellFlute], $canMaybeReach|joel, [$canReach|joel]",
+			"{$canMaybeTriggerMesia, [$canTriggerMesia], $canCrossRivers, $canMaybeReach|portoa, [$canReach|portoa]}"
+		],
+		"sections": [
+			{
+				"name": "Calm the Sea",
+                "item_count": 1,
+				"capture_item": true,
+				"capture_item_layout": "tracker_items"
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+    			"map": "map_overworld",
+				"x": 870,
+				"y": 360
+			}
+		]
+	},
+	
+	// Combine the Items
+	{
+		"name": "Combine the Items",
+		"access_rules": [
+			"$maybeHasBrokenStatue, [$hasBrokenStatue], $maybeHasRepairLamp, [$hasRepairLamp]"
+		],
+		"sections": [
+			{
+				"name": "Combine them!",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+    			"map": "map_overworld",
+				"x": 700,
+				"y": 735
+			}
+		]
+	},
+	
+	// Kensu Tag
+	{
+		"name": "Kensu Tag",
+		"access_rules": [
+			"paralysis, $maybeHasKensuTrade, [$hasKensuTrade], $canMaybeReach|swan, [$canReach|swan]"
+		],
+		"sections": [
+			{
+				"name": "Turn-in Love Pendant",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"visibility_rules": [ "" ],
+				"map": "map_overworld",
+				"x": 1000,
+				"y": 200
+			}
+		]
+	},
+	
+	// Zebu in the Temple
+	{
+		"name": "Shyron",
+		"access_rules": [
+			"$canMaybeReach|shyron, [$canReach|shyron]"
+		],
+		"sections": [
+			{
+				"name": "Zebu in the Temple",
+				"visibility_rules": [ "" ],
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"x": 120,
+				"y": 230
+			}
+		]
+	},
+
+	// Mado 1
+	{
+		"name": "Mado 1",
+		"access_rules": [
+			"thunder, $canMaybeKillMado1, [$canKillMado1], $canMaybeReach|goa, [$canReach|goa], $canMaybeReach|shyron, [$canReach|shyron]"
+		],
+		"sections": [
+			{
+				"name": "Trigger Masscre first",
+                "item_count": 1,
+				"hosted_item": "mado1_cleared"
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 60,
+				"y": 230
+			}
+		]
+	},
+	
+	// Brokahana
+	{
+		"name": "Brokahana",
+		"access_rules": [
+			"thunder, $canMaybeKillMado1, [$canKillMado1], change, $canMaybeReach|goa, [$canReach|goa], $canMaybeReach|shyron, [$canReach|shyron]"
+		],
+		"sections": [
+			{
+				"name": "Change into Akahana",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 360,
+				"y": 50
+			}
+		]
+	},
+	
+	// Deo's Pendant
+	{
+		"name": "Meadow",
+		"access_rules": [
+			"change, telepathy, $canMaybeReach|sahara, [$canReach|sahara]"
+		],
+		"sections": [
+			{
+				"name": "Console the Bunny",
+                "item_count": 1
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "" ],
+				"x": 550,
+				"y": 500
+			}
+		]
+	},
+]

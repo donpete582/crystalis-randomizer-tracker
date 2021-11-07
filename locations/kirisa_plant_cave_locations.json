@@ -1,0 +1,88 @@
+[
+	{
+		//Kirisa Plant Cave
+		"name": "Kirisa Plant Cave",
+		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canCrossRivers, $canMaybeBreakKirisaPlantCaveWalls, [$canBreakKirisaPlantCaveWalls]"],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Kirisa Plant Cave Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1280,
+						"y": 1317,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Kirisa Plant Cave Items",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1280,
+						"y": 1317,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Antidote
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Antidote",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_kirisa_plant_cave",
+						"x": 310,
+						"y": 200,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Kirisa Plant
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Kirisa Plant",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_kirisa_plant_cave",
+						"x": 340,
+						"y": 370
+					}
+				]
+			},
+		]
+	}
+]

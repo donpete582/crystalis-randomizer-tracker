@@ -1,0 +1,149 @@
+[
+	{
+		//Goa: Sabera's Floor
+		"name": "Goa: Sabera's Floor",
+		"access_rules": [
+			"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance]",
+			"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit]"
+		],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "Goa: Sabera's Floor",
+				"access_rules": [
+					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canCrossRivers], [$canBreakSaberaChestWall], [$canBreakSaberaBossWall], [$canKillSabera2]",
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers, [$canBreakSaberaChestWall], [$canBreakSaberaBossWall], [$canKillSabera2]",
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], [$canCrossRivers], $canMaybeBreakSaberaChestWall, [$canBreakSaberaChestWall], [$canBreakSaberaBossWall], [$canKillSabera2]"
+				],
+				"sections": [
+					{
+						"name": "Goa: Sabera's Floor Items",
+						"item_count": 4,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 619,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Goa: Sabera's Floor",
+				"access_rules": [
+					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canKillSabera2]",
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers, $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall]"
+				],
+				"sections": [
+					{
+						"name": "Goa: Sabera's Floor Items",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 619,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Fruit of Power
+			{
+				"name": "Goa: Sabera's Floor",
+				"access_rules": [
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canMaybeBreakSaberaChestWall, [$canBreakSaberaChestWall]",
+					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canKillSabera2], $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall], $canCrossRivers, $canMaybeBreakSaberaChestWall, [$canBreakSaberaChestWall]"
+				],
+				"sections": [
+					{
+						"name": "Fruit of Power",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_sabera",
+						"x": 90,
+						"y": 25,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Lysis Plant
+			{
+				"name": "Goa: Sabera's Floor",
+				"access_rules": [
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers",
+					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canKillSabera2], $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall], $canCrossRivers"
+				],
+				"sections": [
+					{
+						"name": "Lysis Plant",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_sabera",
+						"x": 230,
+						"y": 200,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Fruit of Repun
+			{
+				"name": "Goa: Sabera's Floor",
+				"access_rules": [
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers",
+					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canKillSabera2], $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall], $canCrossRivers"
+				],
+				"sections": [
+					{
+						"name": "Fruit of Repun",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_sabera",
+						"x": 475,
+						"y": 380,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Sabera 2 Reward
+			{
+				"name": "Goa: Sabera's Floor",
+				"access_rules": [
+					"$canMaybeReachSaberasFloorEntrance, [$canReachSaberasFloorEntrance], $canCrossRivers, $canMaybeBreakSaberaBossWall, [$canBreakSaberaBossWall], $canMaybeKillSabera2, [$canKillSabera2]",
+					"$canMaybeReachSaberasFloorExit, [$canReachSaberasFloorExit], $canMaybeKillSabera2, [$canKillSabera2]"
+				],
+				"sections": [
+					{
+						"name": "Sabera 2 Reward",
+						"item_count": 1,
+						"hosted_item": "sabera2_cleared"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_sabera",
+						"x": 410,
+						"y": 10
+					}
+				]
+			},
+		]
+	}
+]

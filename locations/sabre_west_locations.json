@@ -1,0 +1,147 @@
+﻿[
+	{
+		//Mt. Sabre West
+		"name": "Mt. Sabre West",
+		"access_rules": ["$canMaybeReach|brynmaer, [$canReach|brynmaer]"],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], [$canClimbSlope], [$hasTornelBracelet]"],
+				"sections": [
+					{
+						"name": "Mt. Sabre West Items",
+						"item_count": 5,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 400,
+						"y": 1350,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": [
+					"$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], [$canClimbSlope], $maybeHasTornelBracelet, [$hasTornelBracelet]",
+					"$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $canClimbSlope, [$hasTornelBracelet]"
+				],
+				"sections": [
+					{
+						"name": "Mt. Sabre West Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 400,
+						"y": 1350,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Tornado Bracelet
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $canClimbSlope"],
+				"sections": [
+					{
+						"name": "Tornado Bracelet",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 520,
+						"y": 165
+					}
+				]
+			},
+			//Warp Boots
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]"],
+				"sections": [
+					{
+						"name": "Warp Boots",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 385,
+						"y": 550,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Medical Herb
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]"],
+				"sections": [
+					{
+						"name": "Medical Herb",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 860,
+						"y": 130,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Magic Ring
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]"],
+				"sections": [
+					{
+						"name": "Magic Ring",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 670,
+						"y": 430,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Tornel
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $maybeHasTornelBracelet, [$hasTornelBracelet]"],
+				"sections": [
+					{
+						"name": "Tornel - Show him Tornado Bracelet",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 630,
+						"y": 430
+					}
+				]
+			},
+		]
+	}
+]

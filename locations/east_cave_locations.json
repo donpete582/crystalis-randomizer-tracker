@@ -1,0 +1,52 @@
+[
+	{
+		//East Cave
+		"name": "East Cave",
+		"access_rules": ["$canMaybeReach|leaf, [$canReach|leaf]"],
+		"force_invisibility_rules": ["flag_vm", "flag_vbangm"],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "East Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "East Cave Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 275,
+						"y": 1400,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu", "flag_vm", "flag_vbangm"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "East Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "East Cave Items",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 275,
+						"y": 1400,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu", "flag_vm", "flag_vbangm"]
+					}
+				],
+			},
+		]
+	}
+]

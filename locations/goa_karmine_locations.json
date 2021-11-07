@@ -1,0 +1,257 @@
+[
+	{
+		//Goa: Karmine's Floor
+		"name": "Goa: Karmine's Floor",
+		"access_rules": [
+			"$canMaybeReachKarminesFloorEntrance, [$canReachKarminesFloorEntrance], $canMaybeBreakKarmineWall, [$canBreakKarmineWall]",
+			"$canMaybeReachKarminesFloorExit, [$canReachKarminesFloorExit]"
+		],
+		"children": [
+			//Overview with mimics
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+					"$maybeHasSlimeTrade, [$hasSlimeTrade], [$canCrossSpikes], [$canBypassBarriers], [$canKillKarmine]",
+					"[$hasSlimeTrade], $canCrossSpikes, [$canBypassBarriers], [$canKillKarmine]",
+				],
+				"sections": [
+					{
+						"name": "Goa: Karmine's Floor Items",
+						"item_count": 8,
+						"clear_as_group": "false"
+					},
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 819,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Overview without mimics
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+					"$maybeHasSlimeTrade, [$hasSlimeTrade], [$canCrossSpikes], [$canBypassBarriers], [$canKillKarmine]",
+					"[$hasSlimeTrade], $canCrossSpikes, [$canBypassBarriers], [$canKillKarmine]",
+				],
+				"sections": [
+					{
+						"name": "Goa: Karmine's Floor Items",
+						"item_count": 5,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 819,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+					"$maybeHasSlimeTrade, [$hasSlimeTrade], [$canCrossSpikes], [$canBypassBarriers], [$canKillKarmine]",
+					"[$hasSlimeTrade], $canCrossSpikes, $canBypassBarriers, $canMaybeKillKarmine, [$canKillKarmine]",
+				],
+				"sections": [
+					{
+						"name": "Goa: Karmine's Floor Items",
+						"item_count": 3,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 819,
+						"y": 20,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Mimic 1
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes",
+				],
+				"sections": [
+					{
+						"name": "Mimic 1",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 505,
+						"y": 480,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Mimic 2
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes",
+				],
+				"sections": [
+					{
+						"name": "Mimic 2",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 570,
+						"y": 480,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Mimic 3
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes",
+				],
+				"sections": [
+					{
+						"name": "Mimic 3",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 570,
+						"y": 650,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Slimed Kensu
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$maybeHasSlimeTrade, [$hasSlimeTrade]"
+				],
+				"sections": [
+					{
+						"name": "Slimed Kensu",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 68,
+						"y": 145,
+					}
+				],
+			},
+			//Warp Boots
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes"
+				],
+				"sections": [
+					{
+						"name": "Warp Boots",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 440,
+						"y": 650,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Magic Ring
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes"
+				],
+				"sections": [
+					{
+						"name": "Magic Ring",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 505,
+						"y": 650,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Karmine Reward 1
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes, $canMaybeKillKarmine, [$canKillKarmine]"
+				],
+				"sections": [
+					{
+						"name": "Karmine Reward 1",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 425,
+						"y": 480
+					}
+				],
+			},
+			//Karmine Reward 2
+			{
+				"name": "Goa: Karmine's Floor",
+				"access_rules": [
+						"$canCrossSpikes, $canMaybeKillKarmine, [$canKillKarmine]"
+				],
+				"sections": [
+					{
+						"name": "Karmine Reward 2",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_goa_karmine",
+						"x": 455,
+						"y": 480
+					}
+				],
+			}
+		]
+	}
+]

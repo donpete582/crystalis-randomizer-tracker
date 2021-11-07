@@ -1,0 +1,243 @@
+{
+"tracker_map": {
+	"type": "tabbed",
+	"tabs": [
+		{
+			"title": "Overworld",
+			"content": {
+				"type": "layout",
+				"dropshadow": false,
+				"v_alignment": "center",
+				"key": "world_map_layout"
+			},
+		},
+		{
+			"title": "Caves",
+			"content": {
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Sealed",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "sealed_cave_map_layout"
+						}
+					},
+					{
+						"title": "Waterfall",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "waterfall_cave_map_layout"
+						}
+					},
+					{
+						"title": "Fog Lamp",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "fog_lamp_cave_map_layout"
+						}
+					},
+					{
+						"title": "Kirisa Plant",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "kirisa_plant_cave_map_layout"
+						}
+					},
+					{
+						"title": "Evil Spirit Island",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "evil_spirit_island_map_layout"
+						}
+					},
+					{
+						"title": "Oasis",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "oasis_cave_map_layout"
+						}
+					}
+				]
+			}
+		},
+		{
+			"title": "Mountains",
+			"content": {
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Sabre West",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "mt_sabre_west_map_layout"
+						}
+					},
+					{
+						"title": "Sabre North",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "mt_sabre_north_map_layout"
+						}
+					},
+					{
+						"title": "Mt. Hydra",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "mt_hydra_map_layout"
+						}
+					},
+				]
+			}
+		},
+		{
+			"title": "Fortresses",
+			"content": {
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Sabera's",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "saberas_fortress_map_layout"
+						}
+					},
+					{
+						"title": "Styx",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "styx_map_layout"
+						}
+					},
+					{
+						"title": "Pyramid Front",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "pyramid_front_map_layout"
+						}
+					},
+					{
+						"title": "Pyramid Back",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "pyramid_back_map_layout"
+						}
+					}
+				]
+			}
+		},
+		{
+			"title": "Goa",
+			"content": {
+				"type": "tabbed",
+				"tabs": [
+					{
+						"title": "Kelbesque",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "goa_kelbesque_map_layout"
+						}
+					},
+					{
+						"title": "Sabera",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "goa_sabera_map_layout"
+						}
+					},
+					{
+						"title": "Mado",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "goa_mado_map_layout"
+						}
+					},
+					{
+						"title": "Karmine",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "goa_karmine_map_layout"
+						}
+					}
+				]
+			}
+		}
+	]
+},
+  "tracker_default": {
+		"type": "container",
+		"background": "#202a33",
+		"content": {
+			"type": "dock",
+			"dropshadow": false,
+			"content": [
+				{
+					"type": "dock",
+					"dock": "left",
+					"v_alignment": "stretch",
+					"content": [
+						{
+							"type": "group",
+							"header": "Items",
+							"dock": "top",
+							"content": {
+								"type": "layout",
+								"key": "tracker_input"
+							}
+						},
+						{
+							"type": "group",
+							"header": "Pinned Locations",
+							"content": {
+								"type": "recentpins",
+								"style": "wrap",
+								"h_alignment": "stretch",
+								"v_alignment": "stretch",
+								"orientation": "vertical",
+								"compact": true
+							}
+						}
+					]
+				},
+				{
+					"type": "layout",
+					"key": "tracker_map"
+				}
+			]
+		}
+	}
+}

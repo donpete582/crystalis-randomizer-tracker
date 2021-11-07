@@ -1,0 +1,97 @@
+[
+	{
+		//Pyramid Front
+		"name": "Pyramid Front",
+		"access_rules": ["$canMaybeReach|sahara, [$canReach|sahara], flight"],
+		"children": [
+			//Overview with consumables
+			{
+				"name": "Pyramid Front",
+				"access_rules": [
+					"[$hasAnySword], [flag_nw]",
+					"[$hasAnyBattleMagic]"
+				],
+				"sections": [
+					{
+						"name": "Pyramid Front Items",
+						"item_count": 3,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 650,
+						"y": 490,
+						"size": 90,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Pyramid Front",
+				"access_rules": [
+					"$hasAnySword, flag_nw",
+					"$hasAnyBattleMagic"
+				],
+				"sections": [
+					{
+						"name": "Pyramid Front Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 650,
+						"y": 490,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			//Magic Ring
+			{
+				"name": "Pyramid Front",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Magic Ring",
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_pyramid_front",
+						"x": 190,
+						"y": 120,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Bow Of Truth/Psycho Armor
+			{
+				"name": "Pyramid Front",
+				"access_rules": [
+					"$hasAnySword, flag_nw",
+					"$hasAnyBattleMagic"
+				],
+				"sections": [
+					{
+						"name": "Bow of Truth/Psycho Armor",
+						"item_count": 2
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_pyramid_front",
+						"x": 190,
+						"y": 310
+					}
+				]
+			},
+		]
+	}
+]

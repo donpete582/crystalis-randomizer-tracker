@@ -1,0 +1,26 @@
+{
+  "tracker_broadcast": {
+    "type": "array",
+    "orientation": "horizontal",
+    "background": "#202a33",
+    "style": "stack",
+    "content": [
+        {
+			"type": "layout",
+			"dropshadow": false,
+			"margin": 0,
+			"key": "tracker_input"
+        },
+        {
+			"type": "layout",
+			"dropshadow": false,
+			"margin": 0,
+			"key": "tracker_map",
+			"height": 700,
+			"width": 500,
+			"h_alignment": "stretch",
+			"v_alignment": "stretch"
+        },
+    ]
+  }
+}

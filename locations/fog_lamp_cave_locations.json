@@ -1,0 +1,147 @@
+[
+	{
+		//Fog Lamp Cave
+		"name": "Fog Lamp Cave",
+		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canCrossRivers, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]"],
+		"children": [
+			//Overview with mimics
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Fog Lamp Cave Items",
+						"item_count": 4,
+						"clear_as_group": "false"
+					},
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1280,
+						"y": 942,
+						"size": 90,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Overview without mimics
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Fog Lamp Cave Items",
+						"item_count": 2,
+						"clear_as_group": "false"
+					},
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1280,
+						"y": 942,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_et", "flag_eu"]
+					}
+				],
+			},
+			//Overview without consumables
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Fog Lamp Cave Items",
+						"item_count": 1,
+						"clear_as_group": "false"
+					},
+				],
+				"map_locations": [
+					{
+						"map": "map_overworld",
+						"x": 1280,
+						"y": 942,
+						"size": 90,
+						"force_invisibility_rules": ["$negate|flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Lysis Plant",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 220,
+						"y": 25,
+						"force_invisibility_rules": ["flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Mimic 1",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 326,
+						"y": 200,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Mimic 2",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 170,
+						"y": 336,
+						"force_invisibility_rules": ["flag_et", "flag_eu"]
+					}
+				],
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": [""],
+				"sections": [
+					{
+						"name": "Fog Lamp",
+						"item_count": 1,
+						"clear_as_group": "false"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 602,
+						"y": 60,
+					}
+				],
+			},
+		]
+	}
+]
