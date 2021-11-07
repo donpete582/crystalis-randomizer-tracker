@@ -1,0 +1,15 @@
+﻿{
+  "name": "Crystalis Randomizer (Latest)",
+  "game_name": "Crystalis",
+  "package_version": "1.0.0",
+  "package_uid": "crystalis_codegorilla",
+  "author": "CodeGorilla",
+  "variants": {
+    "items_only": {
+      "display_name": "Item Tracker"
+    },
+    "items_and_map_custom": {
+      "display_name": "Map Tracker"
+    }
+  }
+}
