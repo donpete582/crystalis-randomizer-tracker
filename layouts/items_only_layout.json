@@ -1,7 +1,7 @@
 {
 	"tracker_default": {
 		"type": "container",
-		"background": "#202a33",
+		//"background": "#202a33",
 		"content": {
 			"type": "dock",
 			"dropshadow": false,

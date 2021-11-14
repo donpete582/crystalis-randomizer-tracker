@@ -321,7 +321,7 @@ function canMaybeBreakPowerRingWall()
 end
 
 function resetWallTracking()
-	print("Resetting tested walls...")
+	--print("Resetting tested walls...")
 	local scw = Tracker:FindObjectForCode("scw")
 	if scw.CurrentStage == 5 then
 		scw.CurrentStage = 0

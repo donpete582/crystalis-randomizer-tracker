@@ -98,7 +98,7 @@ function canCrossGivenGoaFloor(boss)
 	elseif boss == "karmine" then
 		return canCrossKarminesFloor()
 	end
-	print("Unrecognized boss: " .. boss)
+	--print("Unrecognized boss: " .. boss)
 	return false
 end
 
@@ -112,7 +112,7 @@ function canMaybeCrossGivenGoaFloor(boss)
 	elseif boss == "karmine" then
 		return canMaybeCrossKarminesFloor()
 	end
-	print("Unrecognized boss: " .. boss)
+	--print("Unrecognized boss: " .. boss)
 	return false
 end
 

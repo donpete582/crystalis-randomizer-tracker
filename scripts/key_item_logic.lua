@@ -13,7 +13,7 @@ function maybeHasWindmillKey()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("redkey") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownkey") > 0 or hasWindmillKey()
+		return	(Tracker:ProviderCountForCode("unknownkey") > 0 and Tracker:ProviderCountForCode("notwindmill") == 0) or hasWindmillKey()
 	end
 end
 
@@ -30,7 +30,7 @@ function maybeHasKeyToPrison()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("bluekey") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownkey") > 0 or hasKeyToPrison()
+		return	(Tracker:ProviderCountForCode("unknownkey") > 0 and Tracker:ProviderCountForCode("notprison") == 0) or hasKeyToPrison()
 	end
 end
 
@@ -47,7 +47,7 @@ function maybeHasKeyToStyx()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("greenkey") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownkey") > 0 or hasKeyToStyx()
+		return	(Tracker:ProviderCountForCode("unknownkey") > 0 and Tracker:ProviderCountForCode("notstyx") == 0) or hasKeyToStyx()
 	end
 end
 
@@ -64,7 +64,7 @@ function maybeHasAlarmFlute()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("grayflute") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownflute") > 0 or hasAlarmFlute()
+		return	(Tracker:ProviderCountForCode("unknownflute") > 0 and Tracker:ProviderCountForCode("notalarm") == 0) or hasAlarmFlute()
 	end
 end
 
@@ -81,7 +81,7 @@ function maybeHasInsectFlute()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("greenflute") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownflute") > 0 or hasInsectFlute()
+		return	(Tracker:ProviderCountForCode("unknownflute") > 0 and Tracker:ProviderCountForCode("notinsect") == 0) or hasInsectFlute()
 	end
 end
 
@@ -98,7 +98,7 @@ function maybeHasFluteOfLime()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("blueflute") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownflute") > 0 or hasFluteOfLime()
+		return	(Tracker:ProviderCountForCode("unknownflute") > 0 and Tracker:ProviderCountForCode("notlime") == 0) or hasFluteOfLime()
 	end
 end
 
@@ -115,7 +115,7 @@ function maybeHasShellFlute()
 	if negate("flag_wu") then
 		return Tracker:ProviderCountForCode("redflute") > 0
 	else
-		return	Tracker:ProviderCountForCode("unknownflute") > 0 or hasShellFlute()
+		return	(Tracker:ProviderCountForCode("unknownflute") > 0 and Tracker:ProviderCountForCode("notshell") == 0) or hasShellFlute()
 	end
 end
 
@@ -163,15 +163,15 @@ function maybeHasAkahanaTrade()
 		return Tracker:ProviderCountForCode("redstatue") > 0
 	elseif not flag_wt and flag_wu then
 		return	Tracker:ProviderCountForCode("tradeakahana") > 0 or
-				Tracker:ProviderCountForCode("unkownstatue") > 0
+				(Tracker:ProviderCountForCode("unknowntrade") > 0 and Tracker:ProviderCountForCode("nottradeakahana") == 0)
 	elseif flag_wt and not flag_wu then
 		return	Tracker:ProviderCountForCode("tradeakahana") > 0 or
-				Tracker:ProviderCountForCode("unknowntrade") > 0
+				(Tracker:ProviderCountForCode("unknowntrade") > 0 and Tracker:ProviderCountForCode("nottradeakahana") == 0)
 	else
 		return	Tracker:ProviderCountForCode("tradeakahana") > 0 or
-				Tracker:ProviderCountForCode("unknowntrade") > 0 or
+				((Tracker:ProviderCountForCode("unknowntrade") > 0 or
 				Tracker:ProviderCountForCode("unknownstatue") > 0 or
-				Tracker:ProviderCountForCode("unknownlamp") > 0
+				Tracker:ProviderCountForCode("unknownlamp") > 0) and Tracker:ProviderCountForCode("nottradeakahana") == 0)
 	end
 end
 
@@ -196,15 +196,15 @@ function maybeHasSlimeTrade()
 		return Tracker:ProviderCountForCode("graystatue") > 0
 	elseif not flag_wt and flag_wu then
 		return	Tracker:ProviderCountForCode("tradeslime") > 0 or
-				Tracker:ProviderCountForCode("unkownstatue") > 0
+				(Tracker:ProviderCountForCode("unkownstatue") > 0 and Tracker:ProviderCountForCode("nottradeslime") == 0)
 	elseif flag_wt and not flag_wu then
 		return	Tracker:ProviderCountForCode("tradeslime") > 0 or
-				Tracker:ProviderCountForCode("unknowntrade") > 0
+				(Tracker:ProviderCountForCode("unknowntrade") > 0 and Tracker:ProviderCountForCode("nottradeslime") == 0)
 	else
 		return	Tracker:ProviderCountForCode("tradeslime") > 0 or
-				Tracker:ProviderCountForCode("unknowntrade") > 0 or
+				((Tracker:ProviderCountForCode("unknowntrade") > 0 or
 				Tracker:ProviderCountForCode("unknownstatue") > 0 or
-				Tracker:ProviderCountForCode("unknownlamp") > 0
+				Tracker:ProviderCountForCode("unknownlamp") > 0) and Tracker:ProviderCountForCode("nottradeslime") == 0)
 	end
 end
 
@@ -225,12 +225,12 @@ function maybeHasAryllisTrade()
 	else
 		if not flag_wu then
 			return	Tracker:ProviderCountForCode("tradearyllis") > 0 or
-					Tracker:ProviderCountForCode("unknowntrade") > 0
+					(Tracker:ProviderCountForCode("unknowntrade") > 0 and Tracker:ProviderCountForCode("nottradearyllis") == 0)
 		else
 			return	Tracker:ProviderCountForCode("tradearyllis") > 0 or
-					Tracker:ProviderCountForCode("unknowntrade") > 0 or
+					((Tracker:ProviderCountForCode("unknowntrade") > 0 or
 					Tracker:ProviderCountForCode("unknownstatue") > 0 or
-					Tracker:ProviderCountForCode("unknownlamp") > 0
+					Tracker:ProviderCountForCode("unknownlamp") > 0) and Tracker:ProviderCountForCode("nottradearyllis") == 0)
 		end
 	end
 end
@@ -252,12 +252,12 @@ function maybeHasKensuTrade()
 	else
 		if not flag_wu then
 			return	Tracker:ProviderCountForCode("tradekensu") > 0 or
-					Tracker:ProviderCountForCode("unknowntrade") > 0
+					(Tracker:ProviderCountForCode("unknowntrade") > 0 and Tracker:ProviderCountForCode("nottradekensu") == 0)
 		else
 			return	Tracker:ProviderCountForCode("tradekensu") > 0 or
-					Tracker:ProviderCountForCode("unknowntrade") > 0 or
+					((Tracker:ProviderCountForCode("unknowntrade") > 0 or
 					Tracker:ProviderCountForCode("unknownstatue") > 0 or
-					Tracker:ProviderCountForCode("unknownlamp") > 0
+					Tracker:ProviderCountForCode("unknownlamp") > 0) and Tracker:ProviderCountForCode("nottradekensu") == 0)
 		end
 	end
 end
@@ -283,15 +283,15 @@ function maybeHasFishermanTrade()
 		return Tracker:ProviderCountForCode("bluelamp") > 0
 	elseif not flag_wt and flag_wu then
 		return	Tracker:ProviderCountForCode("tradefisherman") > 0 or
-				Tracker:ProviderCountForCode("unknownlamp") > 0
+				(Tracker:ProviderCountForCode("unknownlamp") > 0 and Tracker:ProviderCountForCode("nottradefisherman") == 0)
 	elseif flag_wt and not flag_wu then
 		return	Tracker:ProviderCountForCode("tradefisherman") > 0 or
-				Tracker:ProviderCountForCode("unknowntrade") > 0
+				(Tracker:ProviderCountForCode("unknowntrade") > 0 and Tracker:ProviderCountForCode("nottradefisherman") == 0)
 	else
 		return	Tracker:ProviderCountForCode("tradefisherman") > 0 or
-				Tracker:ProviderCountForCode("unknowntrade") > 0 or
+				((Tracker:ProviderCountForCode("unknowntrade") > 0 or
 				Tracker:ProviderCountForCode("unknownstatue") > 0 or
-				Tracker:ProviderCountForCode("unknownlamp") > 0
+				Tracker:ProviderCountForCode("unknownlamp") > 0) and Tracker:ProviderCountForCode("nottradefisherman") == 0)
 	end
 end
 
@@ -309,7 +309,7 @@ function maybeHasRepairLamp()
 		return Tracker:ProviderCountForCode("graylamp") > 0
 	else
 		return	Tracker:ProviderCountForCode("brokenlamp") > 0 or
-				Tracker:ProviderCountForCode("unknownlamp") > 0
+				(Tracker:ProviderCountForCode("unknownlamp") > 0 and Tracker:ProviderCountForCode("notbrokenlamp") == 0)
 	end
 end
 
@@ -327,7 +327,7 @@ function maybeHasBrokenStatue()
 		return Tracker:ProviderCountForCode("crackedstatue") > 0
 	else
 		return	Tracker:ProviderCountForCode("brokenstatue") > 0 or
-				Tracker:ProviderCountForCode("unknownstatue") > 0
+				(Tracker:ProviderCountForCode("unknownstatue") > 0 and Tracker:ProviderCountForCode("notbrokenstatue") == 0)
 	end
 end
 
@@ -345,7 +345,7 @@ function maybeHasWhirlpoolStatue()
 		return Tracker:ProviderCountForCode("bluestatue") > 0
 	else
 		return	Tracker:ProviderCountForCode("whirlpool") > 0 or
-				Tracker:ProviderCountForCode("unknownstatue") > 0
+				(Tracker:ProviderCountForCode("unknownstatue") > 0 and Tracker:ProviderCountForCode("notwhirlpool") == 0)
 	end
 end
 

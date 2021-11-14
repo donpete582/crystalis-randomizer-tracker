@@ -208,7 +208,7 @@ function canKillKarmine()
 end
 
 function resetTetrarchyBossTracking()
-	print("Resetting tested bosses...")
+	--print("Resetting tested bosses...")
 	local kelbesque1 = Tracker:FindObjectForCode("kelbesque1")
 	if kelbesque1.CurrentStage == 2 then
 		kelbesque1.CurrentStage = 0

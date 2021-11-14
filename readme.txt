@@ -27,6 +27,11 @@ Version History:
 
 v1.0.0
 	- First release. Implements most flags that affect logic.
+v1.0.1
+	-Removed the default background colors for better NDI capture support
+	-Added negative indicators for key items; the logic will now account for the items in the tracker that you don't have. e.g. if you have an unknown key, and you mark one of the keys you don't have as the Key to Styx, the logic will know that you don't have the Key to Styx, but you might have the Key to Prison or the Windmill Key.
+	-commented out some debug statements
+	-made the whitespace more consistent
 
 Future Release Plans:
 	Wh flag logic

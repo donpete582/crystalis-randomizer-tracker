@@ -65,7 +65,7 @@ end
 function KeyItem:onRightClick()
 	local flag_wt = Tracker:ProviderCountForCode("flag_wt") > 0
 	local flag_wu = Tracker:ProviderCountForCode("flag_wu") > 0
-	print ("flag_wt: " .. (flag_wt and 'true' or 'false') .. " flag_wu: " .. (flag_wu and 'true' or 'false'))
+	--print ("flag_wt: " .. (flag_wt and 'true' or 'false') .. " flag_wu: " .. (flag_wu and 'true' or 'false'))
 	if not flag_wt and not flag_wu then
 		self:setProperty("badgeNum", 0)
 	else
@@ -106,7 +106,8 @@ function KeyItem:canProvideCode(code)
 		return true
 	end
 	for _, badge in ipairs(self.badges) do
-		if code == badge["code"] then
+		if 	code == badge["code"] or
+			code == "not" .. badge["code"] then
 			return true
 		end
 	end
@@ -119,6 +120,10 @@ function KeyItem:providesCode(code)
 		(code == self.code or 
 		code == self.category or
 		(badgeNum > 0 and code == self.badges[badgeNum]["code"])) then
+			return 1
+	end
+	if 	not self:getProperty("active") and
+		(badgeNum > 0 and code == ("not" .. self.badges[badgeNum]["code"])) then
 			return 1
 	end
 	return 0
