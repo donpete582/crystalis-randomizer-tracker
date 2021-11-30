@@ -49,11 +49,12 @@
 			//Vampire Reward
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["$hasAnySword"],
+				"access_rules": ["$canMaybeKillVampire2, [$canKillVampire2]"],
 				"sections": [
 					{
 						"name": "Vampire Reward",
-						"item_count": 1
+						"item_count": 1,
+						"hosted_item": "vampire_cleared"
 					}
 				],
 				"map_locations": [
@@ -67,11 +68,12 @@
 			//Sabera Reward
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["$canMaybeKillSabera1, [$canKillSabera1]"],
+				"access_rules": ["$canMaybeKillVampire2, [$canKillVampire2], $canMaybeKillSabera1, [$canKillSabera1]"],
 				"sections": [
 					{
 						"name": "Sabera Reward",
-						"item_count": 1
+						"item_count": 1,
+						"hosted_item": "sabera1_cleared"
 					}
 				],
 				"map_locations": [
@@ -104,7 +106,7 @@
 			//Medical Herb
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["$hasAnySword"],
+				"access_rules": ["$canMaybeKillVampire2, [$canKillVampire2]"],
 				"sections": [
 					{
 						"name": "Medical Herb",

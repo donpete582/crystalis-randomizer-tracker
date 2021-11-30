@@ -126,15 +126,6 @@
 		]
 	},
 
-	"garbage": {
-		"type": "itemgrid",
-		"h_alignment": "right",
-		//"background": "#202a33",
-		"item_size": 40,
-		"item_margin": "4,4",
-		"rows": []
-	},
-
 	"tracker_left": {
 		"type": "array",
 		"orientation": "vertical",
@@ -255,10 +246,9 @@
 				"item_margin": 2,
 				"item_size": 40,
 				"rows": [
-					["kelbesque1","mado1"],
-					["kelbesque2","mado2"],
-					["sabera1","karmine"],
-					["sabera2","giantinsect"]
+					["kelbesque1","sabera1","mado1"],
+					["kelbesque2","sabera2","mado2"],
+					["giantinsect","vampire","karmine"]
 				],
 			},
 		]
@@ -340,7 +330,7 @@
 				"type": "array",
 				"orientation": "vertical",
 				"style": "stack",
-				"min_width": 70,
+				"min_width": 0,
 				//"background": "#202a33",
 			},
 			{
@@ -358,7 +348,7 @@
 						"type": "array",
 						"orientation": "horizontal",
 						"style": "stack",
-						"min_height": 30,
+						"min_height": 0,
 						//"background": "#202a33",
 					},
 					{

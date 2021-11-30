@@ -125,6 +125,24 @@
 			}
 		]
 	},
+	//Vampire 2
+	{
+		"name": "Vampire 2",
+		"type": "progressive",
+		"loop": true,
+		"stages": [
+			{
+				"img": "images/bosses/vampire.png",
+				"codes": "vampire, vampire_cleared",
+				"inherit_codes" : false
+			},
+			{
+				"img": "images/bosses/vampiretested.png",
+				"codes": "vampire, vampire_tested",
+				"inherit_codes" : false
+			}
+		]
+	},
 	//Giant Insect
 	{
 		"name": "Giant Insect",

@@ -20,6 +20,27 @@ function canMaybeKillInsect()
 	end
 end
 
+function canKillVampire2()
+	if negate("flag_me") then
+		return
+			Tracker:ProviderCountForCode("wind") > 0 or
+			Tracker:ProviderCountForCode("water") > 0 or
+			Tracker:ProviderCountForCode("thunder") > 0
+	else
+		return Tracker:ProviderCountForCode("vampire_cleared") > 0 or Tracker:ProviderCountForCode("sword") > 1 or Tracker:ProviderCountForCode("flag_ns") > 0
+	end
+end
+
+function canMaybeKillVampire2()
+	if negate("flag_me") then
+		return canKillVampire2()
+	elseif Tracker:ProviderCountForCode("vampire_tested") > 0 then
+		return Tracker:ProviderCountForCode("sword") > 1
+	else
+		return hasAnySword() or canKillVampire2()
+	end
+end
+
 function canKillTetrarchyMember()
 	if Tracker:ProviderCountForCode("flag_ns") > 0 then
 		return canMaybeKillTetrarchyMember()
