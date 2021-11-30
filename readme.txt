@@ -32,6 +32,10 @@ v1.0.1
 	-Added negative indicators for key items; the logic will now account for the items in the tracker that you don't have. e.g. if you have an unknown key, and you mark one of the keys you don't have as the Key to Styx, the logic will know that you don't have the Key to Styx, but you might have the Key to Prison or the Windmill Key.
 	-commented out some debug statements
 	-made the whitespace more consistent
+v1.0.2
+	-Added logic and tracking for Vampire 2
+	-Added hosted item for Sabera 1 location
+	-Added hosted item for Karmine location
 
 Future Release Plans:
 	Wh flag logic
