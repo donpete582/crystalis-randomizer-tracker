@@ -36,6 +36,8 @@ v1.0.2
 	-Added logic and tracking for Vampire 2
 	-Added hosted item for Sabera 1 location
 	-Added hosted item for Karmine location
+v1.0.3
+	-Added tracking reset for Vampire 2 when finding a new sword
 
 Future Release Plans:
 	Wh flag logic

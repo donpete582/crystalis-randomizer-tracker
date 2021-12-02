@@ -263,9 +263,13 @@ function resetKarmineTracking()
 	end
 end
 
-function resetInsectTracking()
+function resetMinorBossTracking()
 	local giantinsect = Tracker:FindObjectForCode("giantinsect")
 	if giantinsect.CurrentStage == 2 then
 		giantinsect.CurrentStage = 0
+	end
+	local vampire = Tracker:FindObjectForCode("vampire")
+	if vampire.CurrentStage == 2 then
+		vampire.CurrentStage = 0
 	end
 end

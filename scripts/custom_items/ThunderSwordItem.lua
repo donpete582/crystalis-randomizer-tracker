@@ -100,7 +100,7 @@ end
 
 function ThunderSwordItem:propertyChanged(key, value)
 	if key == "active" and value == true and Tracker.ActiveVariantUID == "items_and_map_custom" then
-		resetInsectTracking()
+		resetMinorBossTracking()
 		resetRageTracking()
 		if Tracker:ProviderCountForCode("flag_ro") > 0 or Tracker:ProviderCountForCode(self.staticcode .. "ball") > 0 or (Tracker:ProviderCountForCode("flag_gc") > 0 and hasAnyLevelTwo()) then
 			resetWallTracking()
