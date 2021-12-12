@@ -2,12 +2,15 @@
 	{
 		//Fog Lamp Cave
 		"name": "Fog Lamp Cave",
-		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canCrossRivers, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]"],
+		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canCrossRivers"],
 		"children": [
 			//Overview with mimics
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls]"
+				],
 				"sections": [
 					{
 						"name": "Fog Lamp Cave Items",
@@ -28,7 +31,10 @@
 			//Overview without mimics
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls]"
+				],
 				"sections": [
 					{
 						"name": "Fog Lamp Cave Items",
@@ -49,7 +55,10 @@
 			//Overview without consumables
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls]"
+				],
 				"sections": [
 					{
 						"name": "Fog Lamp Cave Items",
@@ -69,7 +78,10 @@
 			},
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls]"
+				],
 				"sections": [
 					{
 						"name": "Lysis Plant",
@@ -88,7 +100,11 @@
 			},
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls], d_foglamp1",
+					"flag_wm, $canBreakFogLampCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Mimic 1",
@@ -107,7 +123,11 @@
 			},
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls], d_foglamp1",
+					"flag_wm, $canBreakFogLampCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Mimic 2",
@@ -126,7 +146,11 @@
 			},
 			{
 				"name": "Fog Lamp Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakFogLampCaveWalls, [$canBreakFogLampCaveWalls]",
+					"flag_wm, [$canBreakFogLampCaveWalls], d_foglamp5",
+					"flag_wm, $canBreakFogLampCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Fog Lamp",
@@ -141,6 +165,126 @@
 						"y": 60,
 					}
 				],
+			},
+			//Door Locations
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": ["$negate|d_foglamp1_blocked"],
+				"sections": [
+					{
+						"name": "Door to Room 2",
+						"item_count": 0,
+						"hosted_item": "d_foglamp1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 260,
+						"y": 200,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakFogLampCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": ["$negate|d_foglamp2_blocked, d_foglamp1"],
+				"sections": [
+					{
+						"name": "Door to Room 5",
+						"item_count": 0,
+						"hosted_item": "d_foglamp2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 310,
+						"y": 410,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakFogLampCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": ["$negate|d_foglamp3_blocked, d_foglamp1, d_foglamp2"],
+				"sections": [
+					{
+						"name": "Door to Room 6 (Either Side)",
+						"item_count": 0,
+						"hosted_item": "d_foglamp3",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 375,
+						"y": 230,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakFogLampCaveWalls"
+						]
+					},
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 540,
+						"y": 140,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakFogLampCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": ["$negate|d_foglamp4_blocked, d_foglamp1, d_foglamp2, d_foglamp3"],
+				"sections": [
+					{
+						"name": "Door to Room 7",
+						"item_count": 0,
+						"hosted_item": "d_foglamp4",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 570,
+						"y": 250,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakFogLampCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Fog Lamp Cave",
+				"access_rules": ["$negate|d_foglamp4_blocked, d_foglamp1, d_foglamp2, d_foglamp3, d_foglamp4"],
+				"sections": [
+					{
+						"name": "Door to Room 8",
+						"item_count": 0,
+						"hosted_item": "d_foglamp5",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_fog_lamp_cave",
+						"x": 730,
+						"y": 80,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakFogLampCaveWalls"
+						]
+					}
+				]
 			},
 		]
 	}

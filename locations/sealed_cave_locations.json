@@ -52,6 +52,11 @@
 			//Warp Boots
 			{
 				"name": "Sealed Cave",
+				"access_rules": [
+					"$negate|flag_wm",
+					"flag_wm, d_sealed2",
+					"flag_wm, $canBreakSealedCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Warp Boots",
@@ -70,6 +75,11 @@
 			//Medical Herb 1
 			{
 				"name": "Sealed Cave",
+				"access_rules": [
+					"$negate|flag_wm",
+					"flag_wm, d_sealed1, [$canBreakSealedCaveWalls]",
+					"flag_wm, $canBreakSealedCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Medical Herb 1",
@@ -88,6 +98,11 @@
 			//Ball of Wind
 			{
 				"name": "Sealed Cave",
+				"access_rules": [
+					"$negate|flag_wm",
+					"flag_wm, d_sealed1, [$canBreakSealedCaveWalls]",
+					"flag_wm, $canBreakSealedCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Ball of Wind",
@@ -105,7 +120,11 @@
 			//Antidote
 			{
 				"name": "Sealed Cave",
-				"access_rules": ["$canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]",
+					"flag_wm, d_sealed1, [$canBreakSealedCaveWalls]",
+					"flag_wm, $canBreakSealedCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Antidote",
@@ -124,7 +143,11 @@
 			//Medical Herb 2
 			{
 				"name": "Sealed Cave",
-				"access_rules": ["$canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]",
+					"flag_wm, d_sealed3",
+					"flag_wm, $canBreakSealedCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Medical Herb 2",
@@ -143,7 +166,11 @@
 			//Vampire
 			{
 				"name": "Sealed Cave",
-				"access_rules": ["$canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSealedCaveWalls, [$canBreakSealedCaveWalls]",
+					"flag_wm, d_sealed4, $hasAnySword",
+					"flag_wm, $canBreakSealedCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Vampire Reward",
@@ -155,6 +182,95 @@
 						"map": "map_wind_cave",
 						"x": 405,
 						"y": 90
+					}
+				]
+			},
+			//Door Locations
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$negate|d_sealed1_blocked"],
+				"sections": [
+					{
+						"name": "Door to Wind Ball room",
+						"item_count": 0,
+						"hosted_item": "d_sealed1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 407,
+						"y": 350,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSealedCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$negate|d_sealed2_blocked"],
+				"sections": [
+					{
+						"name": "Door to Warp Boots room",
+						"item_count": 0,
+						"hosted_item": "d_sealed2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 360,
+						"y": 300,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSealedCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$negate|d_sealed3_blocked"],
+				"sections": [
+					{
+						"name": "Door to Medical Herb room",
+						"item_count": 0,
+						"hosted_item": "d_sealed3",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 190,
+						"y": 220,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSealedCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Sealed Cave",
+				"access_rules": ["$negate|d_sealed4_blocked"],
+				"sections": [
+					{
+						"name": "Door to Vampire room",
+						"item_count": 0,
+						"hosted_item": "d_sealed4",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_wind_cave",
+						"x": 295,
+						"y": 180,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSealedCaveWalls"
+						]
 					}
 				]
 			},

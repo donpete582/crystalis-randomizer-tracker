@@ -15,15 +15,25 @@ function canMaybeEnterGoaFrontEntrance()
 end
 
 function canEnterGoaBackEntrance()
-	--TODO: flag_wm logic
-	return 	canReach("goa") and
-			Tracker:ProviderCountForCode("flight") > 0
+	if Tracker:ProviderCountForCode("flag_wm") == 0 then
+		return 	canReach("goa") and
+				Tracker:ProviderCountForCode("flight") > 0
+	else
+		return	canReach("goa") and
+				(Tracker:ProviderCountForCode("d_oasis1") > 0 or
+				Tracker:ProviderCountForCode("flight") > 0)
+	end
 end
 
 function canMaybeEnterGoaBackEntrance()
-	--TODO: flag_wm logic
-	return 	canMaybeReach("goa") and
-			Tracker:ProviderCountForCode("flight") > 0
+	if Tracker:ProviderCountForCode("flag_wm") == 0 then
+		return 	canMaybeReach("goa") and
+				Tracker:ProviderCountForCode("flight") > 0
+	else
+		return	canMaybeReach("goa") and
+				(Tracker:ProviderCountForCode("d_oasis1_blocked") == 0 or
+				Tracker:ProviderCountForCode("flight") > 0)
+	end
 end
 
 function canCrossKelbesquesFloor()
@@ -35,43 +45,67 @@ function canMaybeCrossKelbesquesFloor()
 end
 
 function canCrossSaberasFloor()
-	--TODO: flag_wm logic
-	return	canCrossRivers() and
-			canBreakSaberaBossWall() and
-			canKillSabera2()
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		local canCross =	(canCrossRivers() and canBreakSaberaBossWall() and canBreakSaberaChestWall() and canKillSabera2()) or
+							(Tracker:ProviderCountForCode("d_goasabera1") > 0 and Tracker:ProviderCountForCode("d_goasabera2") > 0 and canKillSabera2())
+		return canCross
+	else
+		return	canCrossRivers() and
+				canBreakSaberaBossWall() and
+				canKillSabera2()
+	end
 end
 
 function canMaybeCrossSaberasFloor()
-	--TODO: flag_wm logic
-	return	canCrossRivers() and
-			canMaybeBreakSaberaBossWall() and
-			canMaybeKillSabera2()
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		local canCross = (Tracker:ProviderCountForCode("d_goasabera1_blocked") == 0 and Tracker:ProviderCountForCode("d_goasabera2_blocked") == 0 and canMaybeKillSabera2())
+		return canCross
+	else
+		return	canCrossRivers() and
+				canMaybeBreakSaberaBossWall() and
+				canMaybeKillSabera2()
+	end
 end
 
 function canCrossMadosFloor()
-	--TODO: flag_wm logic
-	--TODO: flag_vb logic
-	return	canKillMado2() and
-			canCrossSpikes()
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		local canCross =	(Tracker:ProviderCountForCode("d_goamado1") > 0 and canKillMado2() and Tracker:ProviderCountForCode("d_goamado2") > 0) or
+							(canKillMado2() and canCrossSpikes())
+		return canCross
+	else
+		return	canKillMado2() and
+				canCrossSpikes()
+	end
 end
 
 function canMaybeCrossMadosFloor()
-	--TODO: flag_wm logic
-	--TODO: flag_vb logic
-	return	canMaybeKillMado2() and
-			(Tracker:ProviderCountForCode("gas") > 0 or
-			Tracker:ProviderCountForCode("flight") > 0 or
-			Tracker:ProviderCountForCode("flag_ng") > 0)
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		local canCross = (Tracker:ProviderCountForCode("d_goamado1_blocked") == 0 and Tracker:ProviderCountForCode("d_goamado2_blocked") == 0 and canMaybeKillMado2())
+		return canCross
+	else
+		return	canMaybeKillMado2() and
+				canCrossSpikes()
+	end
 end
 
 function canCrossKarminesFloor()
-	--TODO: flag_wm logic
-	return	canBreakKarmineWall()
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		local canCross =	(Tracker:ProviderCountForCode("d_goakarmine1") > 0 and Tracker:ProviderCountForCode("d_goakarmine2") > 0) or
+							canBreakKarmineWall()
+		return canCross
+	else
+		return	canBreakKarmineWall()
+	end
 end
 
 function canMaybeCrossKarminesFloor()
-	--TODO: flag_wm logic
-	return	canMaybeBreakKarmineWall()
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		local canCross =	(Tracker:ProviderCountForCode("d_goakarmine1_blocked") == 0 and Tracker:ProviderCountForCode("d_goakarmine2_blocked") == 0) or
+							canMaybeBreakKarmineWall()
+		return canCross
+	else
+		return	canMaybeBreakKarmineWall()
+	end
 end
 
 function canFullyCrossGoa()
@@ -449,6 +483,7 @@ end
 
 function canReachKelbesquesFloor()
 	local floorName = getFloorForBoss("kelbesque")
+	--print("kelbesque: " .. floorName)
 	if floorName == "1st" then
 		return canReachGoa1stFloor()
 	elseif floorName == "2nd" then
@@ -701,6 +736,7 @@ function canMaybeReachMadosFloorEntrance()
 				(canMaybeReachGoa3rdFloor() and Tracker:ProviderCountForCode("goa3rdunknown") > 0) or
 				(canMaybeReachGoa4thFloor() and Tracker:ProviderCountForCode("goa4thunknown") > 0)
 	end
+	return(canCross)
 end
 
 function canReachMadosFloorExit()

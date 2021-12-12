@@ -9,12 +9,12 @@
 			{
 				"name": "Leaf Elder",
 				"visibility_rules": [ "" ],
-                "item_count": 1
+				"item_count": 1
 			},
 			{
 				"name": "Zebu's Student",
 				"visibility_rules": [ "" ],
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -36,7 +36,7 @@
 			{
 				"name": "Wake him up",
 				"visibility_rules": [ "" ],
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -58,7 +58,7 @@
 			{
 				"name": "Activate Windmill",
 				"visibility_rules": [ "" ],
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -79,7 +79,7 @@
 		"sections": [
 			{
 				"name": "Walk on bridge first",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -101,7 +101,7 @@
 		"sections": [
 			{
 				"name": "Give him item",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -123,7 +123,7 @@
 		"sections": [
 			{
 				"name": "Visit Oak first",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -148,7 +148,7 @@
 		"sections": [
 			{
 				"name": "Storage Room",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -168,7 +168,7 @@
 		"sections": [
 			{
 				"name": "Trade In Kirisa Plant",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -191,11 +191,11 @@
 		"sections": [
 			{
 				"name": "Mom",
-                "item_count": 1
+				"item_count": 1
 			},
 			{
 				"name": "Oak Elder",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -217,7 +217,7 @@
 		"sections": [
 			{
 				"name": "Use Insect Flute",
-                "item_count": 1,
+				"item_count": 1,
 				"hosted_item": "giantinsect_cleared"
 			}
 		],
@@ -246,7 +246,7 @@
 		"sections": [
 			{
 				"name": "Queen 1",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -266,7 +266,7 @@
 		"sections": [
 			{
 				"name": "Queen 2 (Talk to Mesia first)",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -286,7 +286,7 @@
 		"sections": [
 			{
 				"name": "Heal them",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -308,7 +308,7 @@
 			{
 				"name": "Underwater Item",
 				"visibility_rules": [ "" ],
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -350,7 +350,7 @@
 		"sections": [
 			{
 				"name": "Rage",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -372,7 +372,7 @@
 		"sections": [
 			{
 				"name": "Wake Up Kensu",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -394,7 +394,7 @@
 		"sections": [
 			{
 				"name": "Kill Sabera first",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -418,7 +418,7 @@
 		"sections": [
 			{
 				"name": "Calm the Sea",
-                "item_count": 1,
+				"item_count": 1,
 				"capture_item": true,
 				"capture_item_layout": "tracker_items"
 			}
@@ -426,7 +426,7 @@
 		"map_locations": [
 			{
 				"visibility_rules": [ "" ],
-    			"map": "map_overworld",
+				"map": "map_overworld",
 				"x": 870,
 				"y": 360
 			}
@@ -442,13 +442,13 @@
 		"sections": [
 			{
 				"name": "Combine them!",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
 			{
 				"visibility_rules": [ "" ],
-    			"map": "map_overworld",
+				"map": "map_overworld",
 				"x": 700,
 				"y": 735
 			}
@@ -464,7 +464,7 @@
 		"sections": [
 			{
 				"name": "Turn-in Love Pendant",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -487,7 +487,7 @@
 			{
 				"name": "Zebu in the Temple",
 				"visibility_rules": [ "" ],
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -508,7 +508,7 @@
 		"sections": [
 			{
 				"name": "Trigger Masscre first",
-                "item_count": 1,
+				"item_count": 1,
 				"hosted_item": "mado1_cleared"
 			}
 		],
@@ -531,7 +531,7 @@
 		"sections": [
 			{
 				"name": "Change into Akahana",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -553,7 +553,7 @@
 		"sections": [
 			{
 				"name": "Console the Bunny",
-                "item_count": 1
+				"item_count": 1
 			}
 		],
 		"map_locations": [
@@ -565,4 +565,28 @@
 			}
 		]
 	},
+	
+	//Zebu's Door
+	{
+		"name": "Zebu's Cave",
+		"access_rules": [],
+		"sections": [
+			{
+				"name": "Passage to Mt. Sabre West",
+				"item_count": 1,
+				"hosted_item": "d_zebu",
+				"chest_opened_img": "images/blank.png",
+				"chest_unopened_img": "images/blank.png",
+			}
+		],
+		"map_locations": [
+			{
+				"map": "map_overworld",
+				"visibility_rules": [ "flag_wm" ],
+				"x": 60,
+				"y": 1400,
+				"force_invisibility_rules": ["$canBreakZebusCaveWall"]
+			}
+		]
+	}
 ]

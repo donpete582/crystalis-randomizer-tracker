@@ -6,7 +6,8 @@ function canKillInsect()
 			Tracker:ProviderCountForCode("water") > 0 or
 			Tracker:ProviderCountForCode("thunder") > 0
 	else
-		return Tracker:ProviderCountForCode("giantinsect_cleared") > 0 or Tracker:ProviderCountForCode("sword") > 1 or Tracker:ProviderCountForCode("flag_ns") > 0
+		local swordCount = Tracker:ProviderCountForCode("sword")
+		return Tracker:ProviderCountForCode("giantinsect_cleared") > 0 or swordCount > 1 or (Tracker:ProviderCountForCode("flag_ns") > 0 and swordCount > 0)
 	end
 end
 

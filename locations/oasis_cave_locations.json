@@ -50,7 +50,11 @@
 			{
 				"name": "Oasis Cave",
 				//TODO: Technically this item can be reached by full clearing Goa.
-				"access_rules": ["flight"],
+				"access_rules": [
+					"flight",
+					"flag_wm, [flight]",
+					"$negate|flag_wm, $canMaybeEnterGoaFrontEntrance, $canMaybeFullyCrossGoa, [$canEnterGoaFrontEntrance], [$canFullyCrossGoa]"
+				],
 				"sections": [
 					{
 						"name": "Fruit of Power 1",
@@ -69,7 +73,11 @@
 			//Fruit of Power 2
 			{
 				"name": "Oasis Cave",
-				"access_rules": ["$canCrossRivers"],
+				"access_rules": [
+					"$negate|flag_wm, $canCrossRivers",
+					"flag_wm, d_oasis2, [flight]",
+					"flight"
+				],
 				"sections": [
 					{
 						"name": "Fruit of Power 2",
@@ -88,7 +96,11 @@
 			//Leather Boots
 			{
 				"name": "Oasis Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm",
+					"flag_wm, d_oasis2, [flight]",
+					"flight"
+				],
 				"sections": [
 					{
 						"name": "Leather Boots",
@@ -106,10 +118,14 @@
 			//Power Ring
 			{
 				"name": "Oasis Cave",
-				"access_rules": ["$canCrossRivers, $canMaybeBreakPowerRingWall, [$canBreakPowerRingWall]"],
+				"access_rules": [
+					"$negate|flag_wm, $canCrossRivers, $canMaybeBreakPowerRingWall, [$canBreakPowerRingWall]",
+					"flag_wm, d_oasis2, $canCrossRivers, $canMaybeBreakPowerRingWall, [$canBreakPowerRingWall], [flight]",
+					"flag_wm, flight, $canMaybeBreakPowerRingWall, [$canBreakPowerRingWall]"
+				],
 				"sections": [
 					{
-						"name": "Leather Boots",
+						"name": "Power Ring",
 						"item_count": 1
 					}
 				],
@@ -124,7 +140,10 @@
 			//Battle Armor
 			{
 				"name": "Oasis Cave",
-				"access_rules": ["flight"],
+				"access_rules": [
+					"flight",
+					"flag_wm, d_oasis2, [flight]"
+				],
 				"sections": [
 					{
 						"name": "Battle Armor",
@@ -136,6 +155,51 @@
 						"map": "map_oasis_cave",
 						"x": 470,
 						"y": 180
+					}
+				]
+			},
+			//Door Locations
+			{
+				"name": "Oasis Cave",
+				"access_rules": ["$negate|d_oasis1_blocked"],
+				"sections": [
+					{
+						"name": "Door to Goa",
+						"item_count": 0,
+						"hosted_item": "d_oasis1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_oasis_cave",
+						"x": 170,
+						"y": 35,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"flight"
+						]
+					}
+				]
+			},
+			{
+				"name": "Oasis Cave",
+				"access_rules": ["$negate|d_oasis2_blocked"],
+				"sections": [
+					{
+						"name": "Stairs Down to Basement",
+						"item_count": 0,
+						"hosted_item": "d_oasis2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_oasis_cave",
+						"x": 90,
+						"y": 550,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"flight"
+						]
 					}
 				]
 			},

@@ -8,9 +8,11 @@
 			{
 				"name": "Mt. Sabre North",
 				"access_rules": [
-					"$canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], [$canKillKelbesque1], [$hasKeyToPrison]",
-					"[$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], flight, [$hasKeyToPrison]",
-					"[$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], $canTriggerSkip, [$hasKeyToPrison]"
+					"$negate|flag_wm, $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], [$canKillKelbesque1], [$hasKeyToPrison]",
+					"$negate|flag_wm, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], flight, [$hasKeyToPrison]",
+					"$negate|flag_wm, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], $canTriggerSkip, [$hasKeyToPrison]",
+					"flag_wm, [$canBreakSabreNorthWalls], [$canKillKelbesque1], [$hasKeyToPrison]"
+					
 				],
 				"sections": [
 					{
@@ -33,8 +35,9 @@
 			{
 				"name": "Mt. Sabre North",
 				"access_rules": [
-					"$canMaybeAccessSabreNorth, [$canAccessSabreNorth], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], [$canKillKelbesque1], [$hasKeyToPrison]",
-					"$canMaybeAccessSabreNorth, [$canAccessSabreNorth], [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], flight, [$hasKeyToPrison]"
+					"$negate|flag_wm, $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], [$canKillKelbesque1], [$hasKeyToPrison]",
+					"$negate|flag_wm, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], flight, [$hasKeyToPrison]",
+					"flag_wm, [$canBreakSabreNorthWalls], [$canKillKelbesque1], [$hasKeyToPrison]"
 				],
 				"sections": [
 					{
@@ -57,8 +60,10 @@
 			{
 				"name": "Mt. Sabre North",
 				"access_rules": [
-					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls]",
-					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]"
+					"$negate|flag_wm, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls]",
+					"$negate|flag_wm, $canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
+					"flag_wm, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], [$canBreakSabreNorthWalls]",
+					"flag_wm, $canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
 				],
 				"sections": [
 					{
@@ -79,8 +84,13 @@
 			{
 				"name": "Mt. Sabre North",
 				"access_rules": [
-					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls]",
-					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]"
+					"$negate|flag_wm, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls]",
+					"$negate|flag_wm, $canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
+					"flag_wm, d_sabrenorth3, [$canBreakSabreNorthWalls]",
+					"flag_wm, d_sabrenorth4, [$canBreakSabreNorthWalls]",
+					"flag_wm, d_sabrenorth5, [$canBreakSabreNorthWalls]",
+					"flag_wm, $canBreakSabreNorthWalls, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront]",
+					"flag_wm, $canBreakSabreNorthWalls, $canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
 				],
 				"sections": [
 					{
@@ -102,7 +112,7 @@
 				"name": "Mt. Sabre North",
 				"access_rules": [
 					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls]",
-					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]"
+					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
 				],
 				"sections": [
 					{
@@ -122,10 +132,12 @@
 			{
 				"name": "Mt. Sabre North",
 				"access_rules": [
-					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
+					"$negate|flag_wm, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
 					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], flight, $canMaybeKillKelbesque1, [$canKillKelbesque1]",
 					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canTriggerSkip, $canMaybeKillKelbesque1, [$canKillKelbesque1]",
-					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]"
+					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
+					"flag_wm, d_sabrenorth7, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
+					"flag_wm, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], d_sabrenorth7, $canClimbSlope, $canMaybeKillKelbesque1, [$canKillKelbesque1]"
 				],
 				"sections": [
 					{
@@ -146,10 +158,12 @@
 			{
 				"name": "Mt. Sabre North",
 				"access_rules": [
-					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], $maybeHasKeyToPrison, [$hasKeyToPrison]",
+					"$negate|flag_wm, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], $maybeHasKeyToPrison, [$hasKeyToPrison]",
 					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], flight, $canMaybeKillKelbesque1, [$canKillKelbesque1], $maybeHasKeyToPrison, [$hasKeyToPrison]",
 					"$canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canTriggerSkip, $canMaybeKillKelbesque1, [$canKillKelbesque1], $maybeHasKeyToPrison, [$hasKeyToPrison]",
-					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]"
+					"$canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]",
+					"flag_wm, d_sabrenorth7, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canMaybeBreakSabreNorthWalls, [$canBreakSabreNorthWalls], $canMaybeKillKelbesque1, [$canKillKelbesque1], $maybeHasKeyToPrison, [$hasKeyToPrison]",
+					"flag_wm, d_sabrenorth7, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront], $canClimbSlope, $canMaybeKillKelbesque1, [$canKillKelbesque1], $maybeHasKeyToPrison, [$hasKeyToPrison]"
 				],
 				"sections": [
 					{
@@ -162,6 +176,194 @@
 						"map": "map_sabre_north",
 						"x": 430,
 						"y": 110
+					}
+				]
+			},
+			//Door Locations
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth1_blocked, $canMaybeAccessSabreNorthFront, [$canAccessSabreNorthFront]",
+					"$negate|d_sabrenorth1_blocked, $canMaybeAccessSabreNorthBack, [$canAccessSabreNorthBack], $canMaybeKillKelbesque1, [$canKillKelbesque1]"
+				],
+				"sections": [
+					{
+						"name": "Exit to Minor Ledge",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 195,
+						"y": 640,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth2_blocked, d_sabrenorth1",
+					"$negate|d_sabrenorth2_blocked, d_sabrenorth5",
+					"$negate|d_sabrenorth2_blocked, d_sabrenorth6",
+					"$negate|d_sabrenorth2_blocked, d_sabrenorth3"
+				],
+				"sections": [
+					{
+						"name": "Door to Room 4 (Upper Bridge)",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 100,
+						"y": 230,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth3_blocked, d_sabrenorth1",
+					"$negate|d_sabrenorth3_blocked, d_sabrenorth2",
+					"$negate|d_sabrenorth3_blocked, d_sabrenorth4",
+					"$negate|d_sabrenorth3_blocked, d_sabrenorth5"
+				],
+				"sections": [
+					{
+						"name": "Door to Room 5 (Midway Chest)",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth3",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 185,
+						"y": 380,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth4_blocked, d_sabrenorth3",
+					"$negate|d_sabrenorth4_blocked, d_sabrenorth5",
+					"$negate|d_sabrenorth4_blocked, d_sabrenorth6",
+					"$negate|d_sabrenorth4_blocked, d_sabrenorth7"
+				],
+				"sections": [
+					{
+						"name": "Door to Room 6 (Ice-Blocked Hallway)",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth4",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 365,
+						"y": 225,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth5_blocked, d_sabrenorth2, $canClimbSlope",
+					"$negate|d_sabrenorth5_blocked, d_sabrenorth3",
+					"$negate|d_sabrenorth5_blocked, d_sabrenorth4",
+					"$negate|d_sabrenorth5_blocked, d_sabrenorth6, $canClimbSlope"
+				],
+				"sections": [
+					{
+						"name": "Exit to Middle Exterior (from Midway Chest)",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth5",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 350,
+						"y": 320,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth6_blocked, d_sabrenorth2",
+					"$negate|d_sabrenorth6_blocked, d_sabrenorth4",
+					"$negate|d_sabrenorth6_blocked, d_sabrenorth5",
+					"$negate|d_sabrenorth6_blocked, d_sabrenorth7"
+				],
+				"sections": [
+					{
+						"name": "Exit to Middle Exterior (from Ice-Blocked Hallway)",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth6",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 180,
+						"y": 300,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre North",
+				"access_rules": [
+					"$negate|d_sabrenorth7_blocked, d_sabrenorth4",
+					"$negate|d_sabrenorth7_blocked, d_sabrenorth6",
+					"$negate|d_sabrenorth7_blocked, flight",
+					"$negate|d_sabrenorth7_blocked, flag_gt"
+				],
+				"sections": [
+					{
+						"name": "Door to Room 7 (Exit to Upper Exterior)",
+						"item_count": 0,
+						"hosted_item": "d_sabrenorth7",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_north",
+						"x": 205,
+						"y": 210,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreNorthWalls"
+						]
 					}
 				]
 			},

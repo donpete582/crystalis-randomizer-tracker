@@ -21,6 +21,7 @@ Tracker:AddItems("items/flags.json")
 		Tracker:AddLayouts("layouts/items_only_layout.json")
 		Tracker:AddLayouts("layouts/broadcast_items_only.json")
 	else
+		Tracker:AddItems("items/doors.json")
 		ScriptHost:LoadScript("scripts/logic_common.lua")
 		ScriptHost:LoadScript("scripts/wall_logic.lua")
 		ScriptHost:LoadScript("scripts/boss_logic.lua")

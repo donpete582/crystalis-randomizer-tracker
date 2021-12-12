@@ -17,6 +17,7 @@ function invalidateCache()
 	maybeReachable = {}
 	reachableCacheValid = false
 	maybeReachableCacheValid = false
+	pyramidFrontCached = nil
 	return success
 end
 		
@@ -72,18 +73,21 @@ end
 --The traversal function will put together these edges to determine which warp points are reachable.
 function canReachBrynmaerFromLeaf()
 	--TODO: flag_wh support
-	--TODO: flag_wm support
+	--Passage through East Cave
 	if negate("flag_vm") and negate("flag_vbangm") then
 		if 	Tracker:ProviderCountForCode("eastfreebrynmaer") > 0 or
 			(Tracker:ProviderCountForCode("eastwallbrynmaer") > 0 and canBreakEastCaveWall()) then
 				return true
 		end
 	end
+	--Passage through Zebu's cave
 	if canBreakZebusCaveWall() then
 		return true
-	else
-		return hasWindmillKey() and canBreakSealedCaveWalls()
+	elseif Tracker:ProviderCountForCode("flag_wm") > 0 and Tracker:ProviderCountForCode("d_zebu") > 0 then
+		return true
 	end
+	--Passage through Windmill Cave (needs flag_wh support)
+	return hasWindmillKey() and canBreakSealedCaveWalls()
 end
 
 function canReachPortoaFromLeaf()
@@ -110,7 +114,6 @@ end
 
 -- This function is technically pointless, since you can always reach Leaf, but included for the sake of completeness and in case something is changed later to randomize your starting point.
 function canReachLeafFromBrynmaer()
-	--TODO: flag_wm support
 	print("How did we get here?")
 	if negate("flag_vm") and negate("flag_vbangm") then
 		if 	Tracker:ProviderCountForCode("eastfreebrynmaer") > 0 or
@@ -118,7 +121,10 @@ function canReachLeafFromBrynmaer()
 				return true
 		end
 	end
+	--Passage through Zebu's cave
 	if canBreakZebusCaveWall() then
+		return true
+	elseif Tracker:ProviderCountForCode("flag_wm") > 0 and Tracker:ProviderCountForCode("d_zebu") > 0 then
 		return true
 	end
 	return false
@@ -146,7 +152,7 @@ end
 
 function canReachPortoaFromNadares()
 	--TODO: flag_wm support
-	return canKillKelbesque1() and hasKeyToPrison() and (canBreakSabreNorthWalls() or Tracker:ProviderCountForCode("flight") > 0 or canTriggerSkip())
+	return canKillKelbesque1() and hasKeyToPrison() and canBreakSabreNorthWalls()
 end
 
 -- This function is technically pointless, since you can always reach Leaf, but included for the sake of completeness and in case something is changed later to randomize your starting point.
@@ -162,8 +168,6 @@ function canReachLeafFromPortoa()
 end
 
 function canReachNadaresFromPortoa()
-	--TODO: flag_we support
-	--TODO: flag_wm support
 	return canKillKelbesque1() and hasKeyToPrison() and canBreakSabreNorthWalls() and (Tracker:ProviderCountForCode("flight") > 0 or canTriggerSkip())
 end
 
@@ -171,7 +175,7 @@ function canReachJoelFromPortoa()
 	--TODO: flag_wh support
 	local canCrossOcean = (canUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
 	local canReachWaterFromFisherman = ((hasFishermanTrade() and (negate("flag_rd") or (canTriggerMesia() and canCrossRivers()))) or Tracker:ProviderCountForCode("flag_vw") > 0)
-	local canReachWaterFromWaterway = (canTriggerMesia() or Tracker:ProviderCountForCode("flag_gs") > 0 or canTriggerSkip())
+	local canReachWaterFromWaterway = (canTriggerMesia() or Tracker:ProviderCountForCode("flag_gs") > 0 or canTriggerSkip() or Tracker:ProviderCountForCode("paralysis") > 0)
 	return 	canCrossOcean and (canReachWaterFromFisherman or canReachWaterFromWaterway)
 end
 
@@ -185,8 +189,9 @@ function canReachPortoaFromJoel()
 end
 
 function canReachZombieFromJoel()
-	--TODO: flag_wm support
-	return canUseShellFlute() and canCrossRivers() and canBreakEvilSpiritIslandWalls()
+	return	canUseShellFlute() and 
+			((canCrossRivers() and canBreakEvilSpiritIslandWalls()) or
+			(Tracker:ProviderCountForCode("flag_wm") > 0 and Tracker:ProviderCountForCode("d_evilspirit2") > 0 and Tracker:ProviderCountForCode("d_evilspirit4") > 0))
 end
 
 function canReachSwanFromJoel()
@@ -194,8 +199,14 @@ function canReachSwanFromJoel()
 end
 
 function canReachJoelFromZombie()
-	--TODO: flag_wm support
-	return canCrossRivers() and (canUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		return	((Tracker:ProviderCountForCode("d_evilspirit2") > 0 and
+				Tracker:ProviderCountForCode("d_evilspirit1") > 0) or
+				(canCrossRivers() and canBreakEvilSpiritIslandWalls())) and
+				(canUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
+	else
+		return canCrossRivers() and (canUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
+	end
 end
 
 function canReachJoelFromSwan()
@@ -302,7 +313,6 @@ end
 
 -- Maybe Traversal
 function canMaybeReachBrynmaerFromLeaf()
-	--TODO: flag_wm support
 	--TODO: flag_wh support
 	if canReachBrynmaerFromLeaf() then
 		return true
@@ -352,7 +362,6 @@ end
 
 -- This function is technically pointless, since you can always reach Leaf, but included for the sake of completeness and in case something is changed later to randomize your starting point.
 function canMaybeReachLeafFromBrynmaer()
-	--TODO: flag_wm support
 	print("How did we get here?")
 	if negate("flag_vm") and negate("flag_vbangm") then
 		if (Tracker:ProviderCountForCode("eastwallbrynmaer") > 0 and canMaybeBreakEastCaveWall()) then
@@ -393,7 +402,7 @@ end
 
 function canMaybeReachPortoaFromNadares()
 	--TODO: flag_wm support
-	return (canMaybeKillKelbesque1() and maybeHasKeyToPrison() and (canMaybeBreakSabreNorthWalls() or Tracker:ProviderCountForCode("flight") > 0 or canTriggerSkip())) or canReachPortoaFromNadares()
+	return canMaybeKillKelbesque1() and maybeHasKeyToPrison() and canMaybeBreakSabreNorthWalls()
 end
 
 -- This function is technically pointless, since you can always reach Leaf, but included for the sake of completeness and in case something is changed later to randomize your starting point.
@@ -409,7 +418,6 @@ function canMaybeReachLeafFromPortoa()
 end
 
 function canMaybeReachNadaresFromPortoa()
-	--TODO: flag_wm support
 	return (canMaybeKillKelbesque1() and maybeHasKeyToPrison() and canMaybeBreakSabreNorthWalls() and (Tracker:ProviderCountForCode("flight") > 0 or canTriggerSkip())) or canReachNadaresFromPortoa()
 end
 
@@ -417,7 +425,7 @@ function canMaybeReachJoelFromPortoa()
 	--TODO: flag_wh support
 	local canMaybeCrossOcean = (canMaybeUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
 	local canMaybeReachWaterFromFisherman = ((maybeHasFishermanTrade() and (negate("flag_rd") or (canMaybeTriggerMesia() and canCrossRivers()))) or Tracker:ProviderCountForCode("flag_vw") > 0)
-	local canReachWaterFromWaterway = (canMaybeTriggerMesia() or Tracker:ProviderCountForCode("flag_gs") > 0 or canTriggerSkip())
+	local canReachWaterFromWaterway = (canMaybeTriggerMesia() or Tracker:ProviderCountForCode("flag_gs") > 0 or canTriggerSkip() or Tracker:ProviderCountForCode("paralysis") > 0)
 	return canMaybeCrossOcean and (canMaybeReachWaterFromFisherman or canReachWaterFromWaterway)
 end
 
@@ -432,8 +440,11 @@ function canMaybeReachPortoaFromJoel()
 end
 
 function canMaybeReachZombieFromJoel()
-	--TODO: flag_wm support
-	return canMaybeUseShellFlute() and canCrossRivers() and canMaybeBreakEvilSpiritIslandWalls()
+	return	canMaybeUseShellFlute() and 
+			((canCrossRivers() and canMaybeBreakEvilSpiritIslandWalls()) or
+			(Tracker:ProviderCountForCode("flag_wm") > 0 and
+			Tracker:ProviderCountForCode("d_evilspirit2_blocked") == 0 and
+			Tracker:ProviderCountForCode("d_evilspirit4_blocked") == 0))
 end
 
 function canMaybeReachSwanFromJoel()
@@ -441,8 +452,14 @@ function canMaybeReachSwanFromJoel()
 end
 
 function canMaybeReachJoelFromZombie()
-	--TODO: flag_wm support
-	return canCrossRivers() and (canMaybeUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
+	if Tracker:ProviderCountForCode("flag_wm") > 0 then
+		return	((Tracker:ProviderCountForCode("d_evilspirit2_blocked") == 0 and
+				Tracker:ProviderCountForCode("d_evilspirit1_blocked") == 0) or
+				(canCrossRivers() and canMaybeBreakEvilSpiritIslandWalls())) and
+				(canMaybeUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
+	else
+		return canCrossRivers() and (canMaybeUseShellFlute() or Tracker:ProviderCountForCode("flight") > 0)
+	end
 end
 
 function canMaybeReachJoelFromSwan()
@@ -580,7 +597,7 @@ function canAccessSabreNorthFront()
 end
 
 function canMaybeAccessSabreNorthBack()
-	return maybeHasKeyToPrison() and (Tracker:ProviderCountForCode("flight") > 0 or canTriggerSkip()) and canReach("portoa") and canMaybeBreakSabreNorthWalls()
+	return maybeHasKeyToPrison() and (Tracker:ProviderCountForCode("flight") > 0 or canTriggerSkip()) and canMaybeReach("portoa") and canMaybeBreakSabreNorthWalls()
 end
 
 function canAccessSabreNorthBack()

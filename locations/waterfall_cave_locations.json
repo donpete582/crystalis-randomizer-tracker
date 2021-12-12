@@ -2,13 +2,16 @@
 	{
 		//Waterfall Cave
 		"name": "Waterfall Cave",
-		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls]"],
+		"access_rules": [
+			"$canMaybeReach|portoa, [$canReach|portoa]"
+			],
 		"children": [
 			//Overview with mimics
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						"[$hasFluteOfLime]",
+						"$negate|flag_wm, $canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], [$hasFluteOfLime]",
+						"flag_wm, [$canBreakWaterfallCaveWalls], [$hasFluteOfLime]"
 					],
 				"sections": [
 					{
@@ -31,8 +34,8 @@
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
-						"[$hasFluteOfLime], flag_gs"
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], $maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], [$hasFluteOfLime], flag_gs"
 					],
 				"sections": [
 					{
@@ -55,8 +58,8 @@
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
-						"[$hasFluteOfLime], flag_gs"
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], $maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], [$hasFluteOfLime], flag_gs"
 					],
 				"sections": [
 					{
@@ -78,7 +81,8 @@
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						""
+						"$negate|flag_wm, $canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls]",
+						"flag_wm, [$canBreakWaterfallCaveWalls]"
 					],
 				"sections": [
 					{
@@ -99,8 +103,8 @@
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
-						"flag_gs"
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], $maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], flag_gs"
 					],
 				"sections": [
 					{
@@ -120,8 +124,8 @@
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						"$maybeHasFluteOfLime, [$hasFluteOfLime]",
-						"flag_gs"
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], $maybeHasFluteOfLime, [$hasFluteOfLime]",
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], flag_gs"
 					],
 				"sections": [
 					{
@@ -142,7 +146,7 @@
 			{
 				"name": "Waterfall Cave",
 				"access_rules": [
-						"$maybeHasFluteOfLime, [$hasFluteOfLime]"
+						"$canMaybeBreakWaterfallCaveWalls, [$canBreakWaterfallCaveWalls], $maybeHasFluteOfLime, [$hasFluteOfLime]"
 					],
 				"sections": [
 					{

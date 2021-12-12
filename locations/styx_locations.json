@@ -70,7 +70,10 @@
 			//Mimic 1
 			{
 				"name": "Styx",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm",
+					"flag_wm, [flight]"
+				],
 				"sections": [
 					{
 						"name": "Mimic 1",
@@ -90,7 +93,10 @@
 			//Mimic 2
 			{
 				"name": "Styx",
-				"access_rules": ["flight"],
+				"access_rules": [
+					"$negate|flag_wm, flight",
+					"flag_wm, [flight]"
+				],
 				"sections": [
 					{
 						"name": "Mimic 2",
@@ -110,7 +116,10 @@
 			//Mimic 3
 			{
 				"name": "Styx",
-				"access_rules": ["flight"],
+				"access_rules": [
+					"$negate|flag_wm, flight",
+					"flag_wm, [flight]"
+				],
 				"sections": [
 					{
 						"name": "Mimic 3",
@@ -130,7 +139,10 @@
 			//Medical Herb
 			{
 				"name": "Styx",
-				"access_rules": ["$canCrossRivers"],
+				"access_rules": [
+					"$negate|flag_wm, $canCrossRivers",
+					"flag_wm, [flight]"
+				],
 				"sections": [
 					{
 						"name": "Medical Herb",
@@ -150,7 +162,11 @@
 			//Sword of Thunder
 			{
 				"name": "Styx",
-				"access_rules": ["$canCrossRivers"],
+				"access_rules": [
+					"$negate|flag_wm, $canCrossRivers, $canCrossSpikes",
+					"flag_wm, flight",
+					"flag_wm, d_styx, [$canCrossSpikes]"
+				],
 				"sections": [
 					{
 						"name": "Sword of Thunder",
@@ -169,7 +185,10 @@
 			//Psycho Shield
 			{
 				"name": "Styx",
-				"access_rules": ["flight"],
+				"access_rules": [
+					"$negate|flag_wm, flight",
+					"flag_wm, [flight]"
+				],
 				"sections": [
 					{
 						"name": "Psycho Shield",
@@ -184,6 +203,29 @@
 						"y": 175
 					}
 				],
+			},
+			//Door Location
+			{
+				"name": "Styx",
+				"access_rules": ["$negate|d_styx_blocked"],
+				"sections": [
+					{
+						"name": "Stairs Up",
+						"item_count": 0,
+						"hosted_item": "d_styx",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_styx",
+						"x": 140,
+						"y": 150,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"flight"
+						]
+					}
+				]
 			},
 		]
 	}

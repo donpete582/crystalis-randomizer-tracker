@@ -42,7 +42,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "scw" ]
+					[ "scw", "d_sealed1", "d_sealed2", "d_sealed3", "d_sealed4"  ]
 				]
 			}
 		]
@@ -72,7 +72,8 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "msww" ]
+					[ "msww", "d_sabrewest1", "d_sabrewest2", "d_sabrewest3"],
+					[ "d_sabrewest4", "d_sabrewest5", "d_sabrewest6"]
 				]
 			}
 		]
@@ -102,7 +103,8 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "msnw", "kelbesque1" ]
+					[ "msnw", "kelbesque1", "d_sabrenorth1", "d_sabrenorth2", "d_sabrenorth3" ],
+					[ "d_sabrenorth4", "d_sabrenorth5", "d_sabrenorth6", "d_sabrenorth7"]
 				]
 			}
 		]
@@ -162,7 +164,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "flcw" ]
+					[ "flcw", "d_foglamp1", "d_foglamp2", "d_foglamp3", "d_foglamp4", "d_foglamp5" ]
 				]
 			}
 		]
@@ -193,7 +195,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "kpcw" ]
+					[ "kpcw", "d_kirisaplant1", "d_kirisaplant2", "d_kirisaplant3" ]
 				]
 			}
 		]
@@ -223,7 +225,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "esiw" ]
+					[ "esiw", "d_evilspirit1", "d_evilspirit2", "d_evilspirit3", "d_evilspirit4" ]
 				]
 			}
 		]
@@ -253,7 +255,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "vampire","sabera1" ]
+					[ "vampire", "sabera1", "d_sabera1", "d_sabera2" ]
 				]
 			}
 		]
@@ -305,6 +307,17 @@
 					"map_styx"
 				]
 			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "d_styx" ]
+				]
+			}
 		]
 	},
 	
@@ -332,7 +345,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "goa_basement_wall_cleared" ]
+					[ "goa_basement_wall_cleared", "d_oasis1", "d_oasis2"]
 				]
 			}
 		]
@@ -432,7 +445,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "sabera2", "goa_sabera_boss_wall_cleared", "goa_sabera_item_wall_cleared" ]
+					[ "sabera2", "goa_sabera_boss_wall_cleared", "goa_sabera_item_wall_cleared", "d_goasabera1", "d_goasabera2"]
 				]
 			}
 		]
@@ -462,7 +475,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "mado2", "goa_mado_wall_cleared"]
+					[ "mado2", "goa_mado_wall_cleared", "d_goamado1", "d_goamado2", "d_goamado3"]
 				]
 			}
 		]
@@ -492,7 +505,7 @@
 				"h_alignment": "center",
 				"margin": 0,
 				"rows": [
-					[ "karmine", "goa_karmine_wall_cleared"]
+					[ "karmine", "goa_karmine_wall_cleared", "d_goakarmine1", "d_goakarmine2", "d_goakarmine3", "d_goakarmine4"]
 				]
 			}
 		]

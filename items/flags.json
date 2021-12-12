@@ -3,8 +3,7 @@
 	{
 		"name": "Randomize Maps",
 		"type": "toggle",
-		"img": "images/flags/not implemented.png",
-		"disabled_img": "images/flags/Wm.png",
+		"img": "images/flags/Wm.png",
 		"loop": true,
 		"codes": "flag_wm"
     },

@@ -7,7 +7,7 @@
 			//Overview with consumables
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["[$canKillSabera1]"],
+				"access_rules": ["[$canKillVampire2], [$canKillSabera1]"],
 				"sections": [
 					{
 						"name": "Sabera's Fortress Items",
@@ -28,7 +28,10 @@
 			//Overview without consumables
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["[$canKillSabera1]"],
+				"access_rules": [
+					"$canMaybeKillVampire2, [$canKillVampire2], [$canKillSabera1]",
+					"flag_wm, $canMaybeKillSabera1, [$canKillVampire2], [$canKillSabera1]"
+				],
 				"sections": [
 					{
 						"name": "Sabera's Fortress Items",
@@ -68,7 +71,12 @@
 			//Sabera Reward
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["$canMaybeKillVampire2, [$canKillVampire2], $canMaybeKillSabera1, [$canKillSabera1]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeKillVampire2, [$canKillVampire2], $canMaybeKillSabera1, [$canKillSabera1]",
+					"flag_wm, d_sabera2, $canMaybeKillSabera1, [$canKillSabera1]",
+					"flag_wm, $canKillVampire2, $canMaybeKillSabera1, [$canKillSabera1]"
+					
+				],
 				"sections": [
 					{
 						"name": "Sabera Reward",
@@ -87,7 +95,11 @@
 			//Fruit of Power
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm",
+					"flag_wm, d_sabera1",
+					"flag_wm, $canKillVampire2"
+				],
 				"sections": [
 					{
 						"name": "Fruit of Power",
@@ -106,7 +118,11 @@
 			//Medical Herb
 			{
 				"name": "Sabera's Fortress",
-				"access_rules": ["$canMaybeKillVampire2, [$canKillVampire2]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeKillVampire2, [$canKillVampire2]",
+					"flag_wm, d_sabera2",
+					"flag_wm, $canKillVampire2"
+				],
 				"sections": [
 					{
 						"name": "Medical Herb",
@@ -119,6 +135,51 @@
 						"x": 460,
 						"y": 110,
 						"force_invisibility_rules": ["flag_eu"]
+					}
+				]
+			},
+			//Door Locations
+			{
+				"name": "Sabera's Fortress",
+				"access_rules": ["$negate|d_sabera1_blocked"],
+				"sections": [
+					{
+						"name": "Left Side Stairs",
+						"item_count": 0,
+						"hosted_item": "d_sabera1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_saberas_fortress",
+						"x": 250,
+						"y": 200,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canKillVampire2"
+						]
+					}
+				]
+			},
+			{
+				"name": "Sabera's Fortress",
+				"access_rules": ["$negate|d_sabera2_blocked"],
+				"sections": [
+					{
+						"name": "Right Side Stairs",
+						"item_count": 0,
+						"hosted_item": "d_sabera2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_saberas_fortress",
+						"x": 405,
+						"y": 420,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canKillVampire2"
+						]
 					}
 				]
 			},

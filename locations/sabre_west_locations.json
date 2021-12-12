@@ -7,7 +7,10 @@
 			//Overview with consumables
 			{
 				"name": "Mt. Sabre West",
-				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], [$canClimbSlope], [$hasTornelBracelet]"],
+				"access_rules": [
+					"$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], [$canClimbSlope], [$hasTornelBracelet]",
+					"flag_wm, [$canBreakSabreWestWalls], [$canClimbSlope], [$hasTornelBracelet]"
+				],
 				"sections": [
 					{
 						"name": "Mt. Sabre West Items",
@@ -30,7 +33,9 @@
 				"name": "Mt. Sabre West",
 				"access_rules": [
 					"$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], [$canClimbSlope], $maybeHasTornelBracelet, [$hasTornelBracelet]",
-					"$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $canClimbSlope, [$hasTornelBracelet]"
+					"$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $canClimbSlope, [$hasTornelBracelet]",
+					"flag_wm, [$canBreakSabreWestWalls], [$canClimbSlope], $maybeHasTornelBracelet, [$hasTornelBracelet]",
+					"flag_wm, [$canBreakSabreWestWalls], $canClimbSlope, [$hasTornelBracelet]",
 				],
 				"sections": [
 					{
@@ -52,7 +57,10 @@
 			//Tornado Bracelet
 			{
 				"name": "Mt. Sabre West",
-				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $canClimbSlope"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $canClimbSlope",
+					"flag_wm, $canClimbSlope, [$canBreakSabreWestWalls]"
+				],
 				"sections": [
 					{
 						"name": "Tornado Bracelet",
@@ -70,7 +78,11 @@
 			//Warp Boots
 			{
 				"name": "Mt. Sabre West",
-				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]",
+					"flag_wm, d_sabrewest1",
+					"flag_wm, $canBreakSabreWestWalls"
+				],
 				"sections": [
 					{
 						"name": "Warp Boots",
@@ -89,7 +101,12 @@
 			//Medical Herb
 			{
 				"name": "Mt. Sabre West",
-				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]",
+					"flag_wm, d_sabrewest2, [$canBreakSabreWestWalls]",
+					"flag_wm, flight, [$canBreakSabreWestWalls]",
+					"flag_wm, flag_gt, [$canBreakSabreWestWalls]",
+				],
 				"sections": [
 					{
 						"name": "Medical Herb",
@@ -108,7 +125,11 @@
 			//Magic Ring
 			{
 				"name": "Mt. Sabre West",
-				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls]",
+					"flag_wm, d_sabrewest6",
+					"flag_wm, $canBreakSabreWestWalls"
+				],
 				"sections": [
 					{
 						"name": "Magic Ring",
@@ -127,7 +148,11 @@
 			//Tornel
 			{
 				"name": "Mt. Sabre West",
-				"access_rules": ["$canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $maybeHasTornelBracelet, [$hasTornelBracelet]"],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakSabreWestWalls, [$canBreakSabreWestWalls], $maybeHasTornelBracelet, [$hasTornelBracelet]",
+					"flag_wm, d_sabrewest6, $maybeHasTornelBracelet, [$hasTornelBracelet]",
+					"flag_wm, $canBreakSabreWestWalls, $maybeHasTornelBracelet, [$hasTornelBracelet]"
+				],
 				"sections": [
 					{
 						"name": "Tornel - Show him Tornado Bracelet",
@@ -139,6 +164,152 @@
 						"map": "map_sabre_west",
 						"x": 630,
 						"y": 430
+					}
+				]
+			},
+			//Door Locations
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$negate|d_sabrewest1_blocked"],
+				"sections": [
+					{
+						"name": "Exit to Warp Boots Ledge",
+						"item_count": 0,
+						"hosted_item": "d_sabrewest1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 77,
+						"y": 530,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreWestWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$negate|d_sabrewest2_blocked"],
+				"sections": [
+					{
+						"name": "Door to Room 2 (from Room 1)",
+						"item_count": 0,
+						"hosted_item": "d_sabrewest2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 335,
+						"y": 460,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreWestWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": [
+					"$negate|d_sabrewest3_blocked, d_sabrewest2",
+					"$negate|d_sabrewest3_blocked, flight",
+					"$negate|d_sabrewest3_blocked, flag_gt"
+				],
+				"sections": [
+					{
+						"name": "Door to Room 3 (from Room 2)",
+						"item_count": 0,
+						"hosted_item": "d_sabrewest3",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 1065,
+						"y": 205,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreWestWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": ["$negate|d_sabrewest4_blocked, d_sabrewest2"],
+				"sections": [
+					{
+						"name": "Exit to Upper Mt. Sabre West",
+						"item_count": 0,
+						"hosted_item": "d_sabrewest4",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 960,
+						"y": 290,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreWestWalls",
+							"flight",
+							"flag_gt"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": [
+					"$negate|d_sabrewest5_blocked, d_sabrewest2, d_sabrewest4",
+					"$negate|d_sabrewest5_blocked, d_sabrewest2, d_sabrewest3",
+					"$negate|d_sabrewest5_blocked, flight",
+					"$negate|d_sabrewest5_blocked, flag_gt"
+				],
+				"sections": [
+					{
+						"name": "Door to Room 4 (from Room 3)",
+						"item_count": 0,
+						"hosted_item": "d_sabrewest5",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 703,
+						"y": 165,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreWestWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Mt. Sabre West",
+				"access_rules": [
+					"$negate|d_sabrewest6_blocked, d_sabrewest5"
+				],
+				"sections": [
+					{
+						"name": "Exit to Tornel's Ledge",
+						"item_count": 0,
+						"hosted_item": "d_sabrewest6",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_sabre_west",
+						"x": 660,
+						"y": 320,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakSabreWestWalls"
+						]
 					}
 				]
 			},

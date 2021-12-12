@@ -2,12 +2,15 @@
 	{
 		//Kirisa Plant Cave
 		"name": "Kirisa Plant Cave",
-		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canCrossRivers, $canMaybeBreakKirisaPlantCaveWalls, [$canBreakKirisaPlantCaveWalls]"],
+		"access_rules": ["$canMaybeReach|portoa, [$canReach|portoa], $canCrossRivers"],
 		"children": [
 			//Overview with consumables
 			{
 				"name": "Kirisa Plant Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakKirisaPlantCaveWalls, [$canBreakKirisaPlantCaveWalls]",
+					"flag_wm, [$canBreakKirisaPlantCaveWalls]"
+				],
 				"sections": [
 					{
 						"name": "Kirisa Plant Cave Items",
@@ -28,7 +31,10 @@
 			//Overview without consumables
 			{
 				"name": "Kirisa Plant Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakKirisaPlantCaveWalls, [$canBreakKirisaPlantCaveWalls]",
+					"flag_wm, [$canBreakKirisaPlantCaveWalls]"
+				],
 				"sections": [
 					{
 						"name": "Kirisa Plant Cave Items",
@@ -49,7 +55,11 @@
 			//Antidote
 			{
 				"name": "Kirisa Plant Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakKirisaPlantCaveWalls, [$canBreakKirisaPlantCaveWalls]",
+					"flag_wm, [$canBreakKirisaPlantCaveWalls], d_kirisaplant1",
+					"flag_wm, $canBreakKirisaPlantCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Antidote",
@@ -68,7 +78,11 @@
 			//Kirisa Plant
 			{
 				"name": "Kirisa Plant Cave",
-				"access_rules": [""],
+				"access_rules": [
+					"$negate|flag_wm, $canMaybeBreakKirisaPlantCaveWalls, [$canBreakKirisaPlantCaveWalls]",
+					"flag_wm, d_kirisaplant1, d_kirisaplant2, d_kirisaplant3",
+					"flag_wm, $canBreakKirisaPlantCaveWalls"
+				],
 				"sections": [
 					{
 						"name": "Kirisa Plant",
@@ -80,6 +94,73 @@
 						"map": "map_kirisa_plant_cave",
 						"x": 340,
 						"y": 370
+					}
+				]
+			},
+			//Door Locations
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": ["$negate|d_kirisaplant1_blocked"],
+				"sections": [
+					{
+						"name": "Door to Room 2",
+						"item_count": 0,
+						"hosted_item": "d_kirisaplant1",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_kirisa_plant_cave",
+						"x": 60,
+						"y": 30,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakKirisaPlantCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": ["$negate|d_kirisaplant2_blocked, d_kirisaplant1"],
+				"sections": [
+					{
+						"name": "Door to Room 3",
+						"item_count": 0,
+						"hosted_item": "d_kirisaplant2",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_kirisa_plant_cave",
+						"x": 120,
+						"y": 210,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakKirisaPlantCaveWalls"
+						]
+					}
+				]
+			},
+			{
+				"name": "Kirisa Plant Cave",
+				"access_rules": ["$negate|d_kirisaplant3_blocked, d_kirisaplant1, d_kirisaplant2"],
+				"sections": [
+					{
+						"name": "Exit to Meadow",
+						"item_count": 0,
+						"hosted_item": "d_kirisaplant3",
+					}
+				],
+				"map_locations": [
+					{
+						"map": "map_kirisa_plant_cave",
+						"x": 225,
+						"y": 440,
+						"force_invisibility_rules": [
+							"$negate|flag_wm",
+							"$canBreakKirisaPlantCaveWalls"
+						]
 					}
 				]
 			},
