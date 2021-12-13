@@ -8,6 +8,7 @@ function BallItem:init(name, code, imagePath)
 	self.disabledImage = ImageReference:FromImageReference(self.activeImage, "@disabled")
 	self.ItemInstance.PotentialIcon = self.activeImage
 	self:updateIcon()	
+	self.allowResets = true
 end
 
 function BallItem:setActive(active)
@@ -64,14 +65,16 @@ function BallItem:save()
 end
 
 function BallItem:load(data)
+	self.allowResets = false
 	if data["active"] ~= nil then
 		self:setActive(data["active"])
 	end
+	self.allowResets = true
 	return true
 end
 
 function BallItem:propertyChanged(key, value)
-	if key == "active" and value == true and Tracker.ActiveVariantUID == "items_and_map_custom" then
+	if key == "active" and value == true and Tracker.ActiveVariantUID == "items_and_map_custom" and self.allowResets then
 		if negate("flag_ro") and Tracker:ProviderCountForCode(string.sub(self.code, 1, -5)) > 0 and (negate("flag_gc") or levelTwoCount() == 1) then
 			resetWallTracking()
 		end

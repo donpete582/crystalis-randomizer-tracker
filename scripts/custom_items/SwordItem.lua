@@ -8,6 +8,7 @@ function SwordItem:init(name, code, imagePath)
 	self.disabledImage = ImageReference:FromImageReference(self.activeImage, "@disabled")
 	self.ItemInstance.PotentialIcon = self.activeImage
 	self:updateIcon()	
+	self.allowResets = true
 end
 
 function SwordItem:setActive(active)
@@ -64,14 +65,16 @@ function SwordItem:save()
 end
 
 function SwordItem:load(data)
+	self.allowResets = false
 	if data["active"] ~= nil then
 		self:setActive(data["active"])
 	end
+	self.allowResets = true
 	return true
 end
 
 function SwordItem:propertyChanged(key, value)
-	if key == "active" and value == true and Tracker.ActiveVariantUID == "items_and_map_custom" then
+	if key == "active" and value == true and Tracker.ActiveVariantUID == "items_and_map_custom" and self.allowResets then
 		resetMinorBossTracking()
 		resetRageTracking()
 		if Tracker:ProviderCountForCode("flag_ro") > 0 or Tracker:ProviderCountForCode(self.code .. "ball") > 0 or (Tracker:ProviderCountForCode("flag_gc") > 0 and hasAnyLevelTwo()) then

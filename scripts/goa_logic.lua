@@ -468,7 +468,7 @@ function canReachGoa4thFloor()
 end
 
 function canMaybeReachGoa4thFloorEntrance()
-	return canMaybeEnterGoaFrontEntrance() and canMaybeCrossGoa1stFloor() and canMaybeCrossGoa2ndFloor() and canMaybeCrossGoa4thFloor()
+	return canMaybeEnterGoaFrontEntrance() and canMaybeCrossGoa1stFloor() and canMaybeCrossGoa2ndFloor() and canMaybeCrossGoa3rdFloor()
 end
 
 function canMaybeReachGoa4thFloorExit()

@@ -30,7 +30,8 @@
 	{
 		"name": "Windmill Guard",
 		"access_rules": [
-			"$maybeHasAlarmFlute, [$hasAlarmFlute], $canMaybeReach|leaf, [$canReach|leaf]"
+			"$negate|flag_wm, $maybeHasAlarmFlute, [$hasAlarmFlute], $canMaybeReach|leaf, [$canReach|leaf]",
+			"flag_wm, $maybeHasAlarmFlute, [$hasAlarmFlute], $canMaybeReach|leaf, [$canReach|leaf], [$canBreakZebusCaveWall]"
 		],
 		"sections": [
 			{
@@ -569,7 +570,7 @@
 	//Zebu's Door
 	{
 		"name": "Zebu's Cave",
-		"access_rules": [],
+		"access_rules": ["$negate|d_zebu_blocked"],
 		"sections": [
 			{
 				"name": "Passage to Mt. Sabre West",

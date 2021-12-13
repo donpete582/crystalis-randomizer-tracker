@@ -195,7 +195,7 @@ function canReachZombieFromJoel()
 end
 
 function canReachSwanFromJoel()
-	return Tracker:ProviderCountForCode("flight") > 0 or (canUseShellFlute() and (hasWhirlpoolStatue() or (Tracker:ProviderCountForCode("flag_gf") > 0 and Tracker:ProviderCountForCode("rabbit"))))
+	return Tracker:ProviderCountForCode("flight") > 0 or (canUseShellFlute() and (hasWhirlpoolStatue() or (Tracker:ProviderCountForCode("flag_gf") > 0 and Tracker:ProviderCountForCode("rabbit") > 0)))
 end
 
 function canReachJoelFromZombie()
@@ -448,7 +448,7 @@ function canMaybeReachZombieFromJoel()
 end
 
 function canMaybeReachSwanFromJoel()
-	return Tracker:ProviderCountForCode("flight") > 0 or (canMaybeUseShellFlute() and (maybeHasWhirlpoolStatue() or (Tracker:ProviderCountForCode("flag_gf") > 0 and Tracker:ProviderCountForCode("rabbit"))))
+	return Tracker:ProviderCountForCode("flight") > 0 or (canMaybeUseShellFlute() and (maybeHasWhirlpoolStatue() or (Tracker:ProviderCountForCode("flag_gf") > 0 and Tracker:ProviderCountForCode("rabbit") > 0)))
 end
 
 function canMaybeReachJoelFromZombie()
