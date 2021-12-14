@@ -230,7 +230,7 @@ function canReachLeafFromGoa()
 end
 
 function canReachShyronFromGoa()
-	return canCrossRivers() and Tracker:ProviderCountForCode("change") > 0
+	return canCrossRivers() and (Tracker:ProviderCountForCode("change") > 0 or Tracker:ProviderCountForCode("flag_gs") > 0)
 end
 
 function canReachSwanFromGoa()
