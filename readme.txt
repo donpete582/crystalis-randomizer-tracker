@@ -48,6 +48,9 @@ v1.0.3
 	-Added tracking reset for Vampire 2 when finding a new sword
 v1.1.0
 	-Major Update: added Wm logic.
+v1.1.1
+	-Fixed a typo that broke checking for Mesia's message when Rage wants the Sword of Fire.
+	-Fixed a minor logic bug about the Medical Herb chest on Mt. Sabre West
 
 Future Release Plans:
 	Wh flag logic

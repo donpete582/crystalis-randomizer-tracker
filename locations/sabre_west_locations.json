@@ -106,6 +106,7 @@
 					"flag_wm, d_sabrewest2, [$canBreakSabreWestWalls]",
 					"flag_wm, flight, [$canBreakSabreWestWalls]",
 					"flag_wm, flag_gt, [$canBreakSabreWestWalls]",
+					"flag_wm, $canBreakSabreWestWalls"
 				],
 				"sections": [
 					{

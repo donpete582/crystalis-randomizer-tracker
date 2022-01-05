@@ -46,7 +46,7 @@
 			{
 				"img": "images/items/swordoffire.png",
 				"img_mods": "overlay|images/badges/rage.png",
-				"codes": "rage, ragesfire",
+				"codes": "rage, ragefire",
 				"inherit_codes" : false
 			},
 			{
