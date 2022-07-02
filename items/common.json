@@ -1,28 +1,4 @@
 [
-	// Bow of Moon
-	{
-		"name": "Bow of Moon",
-		"type": "toggle",
-		"img": "images/items/bowofmoon.png",
-		"loop": "true",
-		"codes": "moon,bowofmoon,moonbow"
-	},
-	// Bow of Sun
-	{
-		"name": "Bow of Sun",
-		"type": "toggle",
-		"img": "images/items/bowofsun.png",
-		"loop": "true",
-		"codes": "sun,bowofsun,sunbow"
-	},
-	// Bow of Truth
-	{
-		"name": "Bow of Truth",
-		"type": "toggle",
-		"img": "images/items/bowoftruth.png",
-		"loop": "true",
-		"codes": "truth,bowoftruth,truthbow"
-	},
 	// Gas Mask
 	{
 		"name": "Gas Mask",

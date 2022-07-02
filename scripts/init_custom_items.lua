@@ -116,4 +116,16 @@ function initCustomItems()
 	local kirisaPlant = KeyItem("Kirisa Plant", "kirisa", "trade", "images/items/kirisaplant.png", tradeBadges)
 	local lovePendant = KeyItem("Love Pendant", "love", "trade", "images/items/lovependant.png", tradeBadges)
 	
+	local bowBadges = 
+	{
+		{code = "unknownbow", flag_wt = false, flag_wu = true, both = true},
+		{code = "sun", flag_wt = false, flag_wu = true, both = true},
+		{code = "moon", flag_wt = false, flag_wu = true, both = true},
+		{code = "truth", flag_wt = false, flag_wu = true, both = true}
+	}
+	
+	local redBow = KeyItem("Bow of Sun", "redbow", "bow", "images/items/bowofsun.png", bowBadges)
+	local grayBow = KeyItem("Bow of Moon", "graybow", "bow", "images/items/bowofmoon.png", bowBadges)
+	local blueBow = KeyItem("Bow of Truth", "bluebow", "bow", "images/items/bowoftruth.png", bowBadges)
+	
 end

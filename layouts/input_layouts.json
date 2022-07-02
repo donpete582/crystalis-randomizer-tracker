@@ -79,9 +79,9 @@
 		"item_margin": "4,4",
 		"rows": [
 			[
-				"moon",
-				"sun",
-				"truth"
+				"graybow",
+				"redbow",
+				"bluebow"
 			]
 		]
 	},

@@ -2,12 +2,12 @@
 	{
 		//Pyramid Back
 		"name": "Pyramid Back",
-		"access_rules": ["$canMaybeReach|sahara, [$canReach|sahara], flight, moon, sun"],
+		"access_rules": ["$canMaybeReach|sahara, [$canReach|sahara], flight, $maybeHasCryptAccess, [$hasCryptAccess]"],
 		"children": [
 			//Overview with mimics
 			{
 				"name": "Pyramid Back",
-				"access_rules": ["[flight]"],
+				"access_rules": [""],
 				"sections": [
 					{
 						"name": "Pyramid Back Items",
@@ -28,7 +28,7 @@
 			//Overview without mimics
 			{
 				"name": "Pyramid Back",
-				"access_rules": ["[flight]"],
+				"access_rules": [""],
 				"sections": [
 					{
 						"name": "Pyramid Back Item",

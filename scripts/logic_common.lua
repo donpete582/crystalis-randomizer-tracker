@@ -128,6 +128,7 @@ end
 function canCrossSpikes()
 	return	(Tracker:ProviderCountForCode("gas") > 0 and negate("flag_vb")) or
 			Tracker:ProviderCountForCode("flight") > 0 or
+			Tracker:ProviderCountForCode("rabbit") > 0 or
 			Tracker:ProviderCountForCode("flag_ng") > 0 or
 			(Tracker:ProviderCountForCode("speed") > 0 and Tracker:ProviderCountForCode("flag_vb") > 0) or
 			canTriggerSkip()

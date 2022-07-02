@@ -51,10 +51,13 @@ v1.1.0
 v1.1.1
 	-Fixed a typo that broke checking for Mesia's message when Rage wants the Sword of Fire.
 	-Fixed a minor logic bug about the Medical Herb chest on Mt. Sabre West
+v1.1.2
+	-Added support for unidentified bows under the Wu flag
+	-Added Rabbit Boots as an in-logic way to cross hazardous terrain
 
 Future Release Plans:
 	Wh flag logic
 	Wg logic optimization
-	Ww flag logic (if possible)
-	Autotracking (if possible)
-	Experimental Wa flag logic
+	Ww flag logic
+	Autotracking
+	Wa flag logic

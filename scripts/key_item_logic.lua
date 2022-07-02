@@ -396,3 +396,20 @@ function resetRageTracking()
 	end
 end
 
+function hasCryptAccess()
+	if negate("flag_wu") then
+		return Tracker:ProviderCountForCode("graybow") > 0 and Tracker:ProviderCountForCode("redbow") > 0
+	else
+		return	(Tracker:ProviderCountForCode("bowsun") > 0 and Tracker:ProviderCountForCode("bowmoon") > 0) or
+				Tracker:ProviderCountForCode("bow") >= 3
+	end
+end
+
+function maybeHasCryptAccess()
+	if negate("flag_wu") then
+		return Tracker:ProviderCountForCode("graybow") > 0 and Tracker:ProviderCountForCode("redbow") > 0
+	else
+		return	(Tracker:ProviderCountForCode("unknownbow") > 1 and Tracker:ProviderCountForCode("bowtruth") == 0) or hasCryptAccess()
+	end
+end
+
