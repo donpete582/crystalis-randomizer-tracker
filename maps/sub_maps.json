@@ -12,6 +12,13 @@
 	},
 
 	{
+		"name": "map_east_cave",
+		"img": "maps/east cave.png",
+		"location_size": 32,
+		"location_border_thickness": 4
+	},
+
+	{
 		"name": "map_sabre_west",
 		"img": "maps/mt sabre west.png",
 		"location_size": 36,

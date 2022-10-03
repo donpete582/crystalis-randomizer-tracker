@@ -17,6 +17,15 @@
 				"type": "tabbed",
 				"tabs": [
 					{
+						"title": "East",
+						"content": {
+							"type": "layout",
+							"dropshadow": false,
+							"v_alignment": "center",
+							"key": "east_cave_map_layout"
+						}
+					},
+					{
 						"title": "Sealed",
 						"content": {
 							"type": "layout",

@@ -3,27 +3,27 @@
 	{
 		"name": "East Cave Free Entrance",
 		"type": "progressive",
-		"disabled_img": "images/east_cave/freeblank.png",
+		"img": "images/east_cave/freeblank.png",
 		"loop": true,
 		"stages": [
 			{
 				"img": "images/east_cave/freebryn.png",
-				"codes": "eastfreebrynmaer",
+				"codes": "eastfree, eastfreebrynmaer",
 				"inherit_codes" : false
 			},
 			{
 				"img": "images/east_cave/freeport.png",
-				"codes": "eastfreeportoa",
+				"codes": "eastfree, eastfreeportoa",
 				"inherit_codes" : false
 			},
 			{
 				"img": "images/east_cave/freegoa.png",
-				"codes": "eastfreegoa",
+				"codes": "eastfree, eastfreegoa",
 				"inherit_codes" : false
 			},
 			{
 				"img": "images/east_cave/freesaha.png",
-				"codes": "eastfreesahara",
+				"codes": "eastfree, eastfreesahara",
 				"inherit_codes" : false
 			}
 		]
@@ -32,27 +32,27 @@
 	{
 		"name": "East Cave Walled Entrance",
 		"type": "progressive",
-		"disabled_img": "images/east_cave/wallblank.png",
+		"img": "images/east_cave/wallblank.png",
 		"loop": true,
 		"stages": [
 			{
 				"img": "images/east_cave/wallbryn.png",
-				"codes": "eastwallbrynmaer",
+				"codes": "eastwall, eastwallbrynmaer",
 				"inherit_codes" : false
 			},
 			{
 				"img": "images/east_cave/wallport.png",
-				"codes": "eastwallportoa",
+				"codes": "eastwall, eastwallportoa",
 				"inherit_codes" : false
 			},
 			{
 				"img": "images/east_cave/wallgoa.png",
-				"codes": "eastwallgoa",
+				"codes": "eastwall, eastwallgoa",
 				"inherit_codes" : false
 			},
 			{
 				"img": "images/east_cave/wallsaha.png",
-				"codes": "eastwallsahara",
+				"codes": "eastwall, eastwallsahara",
 				"inherit_codes" : false
 			}
 		]

@@ -18,6 +18,36 @@
 		]
 	},
 	
+	"east_cave_map_layout": {
+		"type": "array",
+		"orientation": "vertical",
+		"style": "stack",
+		"content": [
+			{
+				"type": "map",
+				"dropshadow": false,
+				"h_alignment": "center",
+				"v_alignment": "center",
+				"max_height": 850,
+				"max_width": 500,
+				"maps": [
+					"map_east_cave"
+				]
+			},
+			{
+				"type": "itemgrid",
+				"dropshadow": false,
+				"item_size": 40,
+				"v_alignment": "center",
+				"h_alignment": "center",
+				"margin": 0,
+				"rows": [
+					[ "ecw", "eastfree", "eastwall" ]
+				]
+			}
+		]
+	},
+	
 	"sealed_cave_map_layout": {
 		"type": "array",
 		"orientation": "vertical",
