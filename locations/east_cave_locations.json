@@ -59,8 +59,8 @@
 				"map_locations": [
 					{
 						"map": "map_east_cave",
-						"x": 890,
-						"y": 105,
+						"x": 535,
+						"y": 60,
 						"force_invisibility_rules": ["flag_vm", "flag_vbangm"]
 					}
 				]
@@ -77,8 +77,8 @@
 				"map_locations": [
 					{
 						"map": "map_east_cave",
-						"x": 555,
-						"y": 40,
+						"x": 335,
+						"y": 25,
 						"force_invisibility_rules": ["flag_eu", "flag_vm", "flag_vbangm"]
 					}
 				]
