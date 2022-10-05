@@ -6,6 +6,7 @@ ScriptHost:LoadScript("scripts/custom_items/BallItem.lua")
 ScriptHost:LoadScript("scripts/custom_items/BraceletItem.lua")
 ScriptHost:LoadScript("scripts/custom_items/GoaFloorItem.lua")
 ScriptHost:LoadScript("scripts/custom_items/KeyItem.lua")
+ScriptHost:LoadScript("scripts/flag_groups.lua")
 ScriptHost:LoadScript("scripts/init_custom_items.lua")
 
 Tracker:AddItems("items/common.json")

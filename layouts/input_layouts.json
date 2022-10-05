@@ -386,6 +386,7 @@
 					[ "flag_gc", "flag_we", "flag_eu", "flag_vm" ],
 					[ "flag_gt", "flag_wg", "flag_er", "flag_vw" ],
 					[ "flag_gr", "", "",  "flag_vb" ],
+					[ "flag_standard", "flag_casual", "", "" ],
 				]
 			}
 		]

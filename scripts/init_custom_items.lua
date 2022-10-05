@@ -19,6 +19,12 @@ function initCustomItems()
 	local goa2nd = GoaFloorItem("2nd", 0)
 	local goa3rd = GoaFloorItem("3rd", 0)
 	local goa4th = GoaFloorItem("4th", 0)
+	-- Standard (Ds Me Rs)
+	local stdFlags = FlagGroupItem("Standard Flags", {"flag_standard", "flag_me"}, "images/flags/standard.png")
+	-- Casual (Ds Edrstux Rt Vds!mw)
+	local casualFlags = FlagGroupItem("Casual Flags", {"flag_casual",  "flag_er", "flag_et", "flag_eu", "flag_vbangm" }, "images/flags/casual.png")
+    -- self.allFlags = { "gf", "gs", "gn", "gg", "gc", "gt", "gr", "wm", "wh", "wt", "wu", "we", "wg", "me", "ro", "rd", "et", "eu", "er",
+    --     "nw", "ns", "nb", "ng", "vm", "vbangm", "vw", "vb" }
 
 	local keyBadges = 
 	{
