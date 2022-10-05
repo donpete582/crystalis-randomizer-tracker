@@ -5,6 +5,9 @@
   "package_uid": "crystalis_codegorilla",
   "author": "CodeGorilla",
   "variants": {
+    "minimal": {
+      "display_name": "Minimal Tracker"
+    },
     "items_only": {
       "display_name": "Item Tracker"
     },

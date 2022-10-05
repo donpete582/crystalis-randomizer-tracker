@@ -1,20 +1,30 @@
 ScriptHost:LoadScript("scripts/sdk/class.lua")
 ScriptHost:LoadScript("scripts/sdk/custom_item.lua")
-ScriptHost:LoadScript("scripts/custom_items/SwordItem.lua")
-ScriptHost:LoadScript("scripts/custom_items/ThunderSwordItem.lua")
-ScriptHost:LoadScript("scripts/custom_items/BallItem.lua")
-ScriptHost:LoadScript("scripts/custom_items/BraceletItem.lua")
-ScriptHost:LoadScript("scripts/custom_items/GoaFloorItem.lua")
-ScriptHost:LoadScript("scripts/custom_items/KeyItem.lua")
-ScriptHost:LoadScript("scripts/init_custom_items.lua")
 
-Tracker:AddItems("items/common.json")
-Tracker:AddItems("items/dungeon_walls.json")
-Tracker:AddItems("items/eastcaveexits.json")
-Tracker:AddItems("items/bosses.json")
-Tracker:AddItems("items/miscellaneous_items.json")
-Tracker:AddItems("items/flags.json")
+if (Tracker.ActiveVariantUID == "minimal") then
+	ScriptHost:LoadScript("minimal/scripts/SwordItem.lua")
+	ScriptHost:LoadScript("minimal/scripts/DoubleStateItem.lua")
+	ScriptHost:LoadScript("minimal/scripts/init_minimal.lua")
+	initCustomItems()
 
+	Tracker:AddItems("minimal/items/items.json")
+	Tracker:AddLayouts("minimal/layouts/tracker.json")
+	Tracker:AddLayouts("minimal/layouts/broadcast.json")
+else
+	ScriptHost:LoadScript("scripts/custom_items/SwordItem.lua")
+	ScriptHost:LoadScript("scripts/custom_items/ThunderSwordItem.lua")
+	ScriptHost:LoadScript("scripts/custom_items/BallItem.lua")
+	ScriptHost:LoadScript("scripts/custom_items/BraceletItem.lua")
+	ScriptHost:LoadScript("scripts/custom_items/GoaFloorItem.lua")
+	ScriptHost:LoadScript("scripts/custom_items/KeyItem.lua")
+	ScriptHost:LoadScript("scripts/init_custom_items.lua")
+	
+	Tracker:AddItems("items/common.json")
+	Tracker:AddItems("items/dungeon_walls.json")
+	Tracker:AddItems("items/eastcaveexits.json")
+	Tracker:AddItems("items/bosses.json")
+	Tracker:AddItems("items/miscellaneous_items.json")
+	Tracker:AddItems("items/flags.json")
 	if (Tracker.ActiveVariantUID == "items_only") then
 		initCustomItems()
 		Tracker:AddLayouts("layouts/input_layouts.json")
@@ -55,3 +65,4 @@ Tracker:AddItems("items/flags.json")
 		Tracker:AddLocations("locations/goa_karmine_locations.json")
 		Tracker:AddLocations("locations/cache_invalidation_location.json")
 	end
+end

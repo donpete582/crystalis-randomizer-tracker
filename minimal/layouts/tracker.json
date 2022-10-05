@@ -1,0 +1,22 @@
+{
+	"tracker_minimal": {
+        "type": "itemgrid",
+		"h_alignment": "center",
+		"item_margin": "0,0,0,0",
+        "rows": [
+			[ "wind", "fire", "water", "thunder" ],
+			[ "sun_moon", "truth", "flight", "draygon" ],
+			[ "kelbesque", "sabera", "mado", "karmine" ]
+        ]
+	},
+	"tracker_default": {
+		"type": "container",
+		"width": 250,
+		"content": [
+			{
+				"type": "layout",
+				"key": "tracker_minimal"
+			}
+		]
+	}
+}

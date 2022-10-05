@@ -1,0 +1,34 @@
+[
+	// Bow of Truth
+	{
+		"name": "Bow of Truth",
+		"type": "toggle",
+		"img": "minimal/images/items/bowoftruth.png",
+		"loop": "true",
+		"codes": "truth"
+	},
+	// Flight
+	{
+		"name": "Flight",
+		"type": "toggle",
+		"img": "images/items/flight.png",
+		"loop": "true",
+		"codes": "flight"
+	},
+	// Draygon
+	{
+		"name": "Draygon",
+		"type": "toggle",
+		"img": "minimal/images/bosses/draygon.png",
+		"loop": "true",
+		"codes": "draygon"
+	},
+	// Karmine
+	{
+		"name": "Karmine",
+		"type": "toggle",
+		"img": "minimal/images/bosses/karmine.png",
+		"loop": "true",
+		"codes": "karmine"
+	},
+]
