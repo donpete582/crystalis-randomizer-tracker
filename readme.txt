@@ -17,6 +17,7 @@ Special Thanks to:
 crossproduct, for the original version of the Crystalis Randomizer EmoTracker pack.
 The EmoTracker Discord, for helping me figure out how to work with EmoTracker, and how to make it do things it probably isn't supposed to. :)
 The Crystalis Randomizer Discord for entertaining obscure logic questions in my attempt to make this as accurate as possible
+donpete, for providing the East/GBC Cave detail map.
 
 Info:
 This is a map and item tracker that attempts to account for all possible combinations of flags that affect logic. This is meant for use with the latest branch of the randomizer, found at https://crystalisrandomizer.com/latest/. As such, the logic of the tracker may not match exactly the logic of the game if you are using the stable version of the randomizer. 
@@ -54,6 +55,9 @@ v1.1.1
 v1.1.2
 	-Added support for unidentified bows under the Wu flag
 	-Added Rabbit Boots as an in-logic way to cross hazardous terrain
+v1.1.3
+	-Fixed Draygon 1 logic; Draygon 1 now only requires any sword, flight, and Saraha access to beat.
+	-Added East Cave detail map
 
 Future Release Plans:
 	Wh flag logic
